@@ -420,7 +420,7 @@ a.introduce_phone.flex.border-2.border-solid.rounded-full.w-64.h-16.text-white.i
 }
 .team_child-1_slide.set{
     display:flex;
-    opacity:0.4;
+    opacity:0.1;
 }
 .team_child-1_slide.hide{
     transform: translateX(-747px);
@@ -428,9 +428,15 @@ a.introduce_phone.flex.border-2.border-solid.rounded-full.w-64.h-16.text-white.i
     display:flex;
     transition: all 0.5s ease;
 }
+.team_child-1_slide.hide1{
+    transform: translateX(747px);
+    opacity:0.1;
+    display:flex;
+    transition: all 0.5s ease;
+}
 .team_child-1_slide.show{
     opacity:1;
-    transition: all .5s ease;
+    transition: all .9s ease;
     display:flex;
 }
 img.team_img-child.team_img-child_0 {

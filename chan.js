@@ -290,7 +290,7 @@ function scrollFunction() {
           }, 1);
   
           hiddenTeam[0].classList.remove('hide');
-        }, 400);
+        }, 450);
      
       }else{
         hiddenTeam[X].classList.add('hide');
@@ -307,7 +307,7 @@ function scrollFunction() {
             hiddenTeam[replace].classList.remove('set');
           }, 1);
           hiddenTeam[replace+1].classList.remove('hide');
-        }, 400);
+        }, 450);
       }
     }
     lastClickTime = currentTime;
@@ -321,7 +321,7 @@ function scrollFunction() {
         alert('Warning: ấn chậm thôi hỏng chuột h!');
       }else{
       if(X == hiddenTeam.length -1){
-        hiddenTeam[X].classList.add('hide');
+        hiddenTeam[X].classList.add('hide1');
         hiddenTeam[X].classList.remove('show');
         pagination.forEach(pluss => {
           pluss.classList.add('hidden');
@@ -334,10 +334,10 @@ function scrollFunction() {
             hiddenTeam[replace].classList.add('show');
             hiddenTeam[replace].classList.remove('set');
           }, 1);
-          hiddenTeam[hiddenTeam.length -1].classList.remove('hide');
-        }, 400);
+          hiddenTeam[hiddenTeam.length -1].classList.remove('hide1');
+        }, 450);
       }else{
-        hiddenTeam[X].classList.add('hide');
+        hiddenTeam[X].classList.add('hide1');
         hiddenTeam[X].classList.remove('show');
         pagination.forEach(pluss => {
           pluss.classList.add('hidden');
@@ -350,8 +350,8 @@ function scrollFunction() {
             hiddenTeam[replace].classList.add('show');
             hiddenTeam[replace].classList.remove('set');
           }, 1);
-          hiddenTeam[replace-1].classList.remove('hide');
-        }, 400);
+          hiddenTeam[replace-1].classList.remove('hide1');
+        }, 450);
       }
     }
       lastClickTime = currentTime;

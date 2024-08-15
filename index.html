@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="https://panorama-slider.uiinitiative.com/assets/index.d2ce9dca.js"></script>
+    <link rel="modulepreload" href="https://panorama-slider.uiinitiative.com/assets/vendor.dba6b2d2.js">
+    <link rel="stylesheet" href="https://panorama-slider.uiinitiative.com/assets/index.c1d53924.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-wrapper{
+      left:0px;
+      transition: left 5s ease;
+    }
+    .swiper-wrapper.active{
+      left:-485px;
+      transition: left 5s ease;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide.swiper-slide-visible {
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+    .swiper.swiper-panorama.swiper-3d.swiper-initialized.swiper-horizontal.swiper-watch-progress {
+    width: 100%;
+    height: 451px;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .text-sm{
+      font-size:15px;
+    }
+    @media screen and (max-width:640px) {
+    .text-5xl {
+        font-size:1.25rem;
+    }
+    .text-4xl{
+      font-size:1.125rem;
+    }
+    .text-3xl{
+      font-size:1.125rem;
+    }
+    .text-9xl{
+      font-size:48px;
+    }
+    .h-96{
+      height:25rem;
+    }
+    .endow_people-like{
+        bottom: -166px;
+    }
+
+  }
+  @media screen and (max-width:490px){
+    .mt-32{
+      margin-top: 5rem;
+    }
+    .text-base{
+        font-size: 0.875rem;
+      }
+  }
+  </style>
+</head>
+<body>
+<div class="app">
+    <div class="header-menu-wrapper flex justify-between">
+        <div class="container text-center">
+            <h1 class="logo hidden items-center xl:flex justify-center">
+              <a href="" class="mr-2"><img src="img/f4828438fd515c8bac399409750c90fa.png" alt="" class="header-navbar-item-img w-44"></a>
+                <div class="header-navbar-gioi-thieu-parent flex items-center open-sans">
+                    <a href="" class="header-navbar-gioi-thieu header-navbar-item mr-3 font-bold text-base 2xl:m-5 relative">Giới thiệu</a>
+                    <a href="" class="header-navbar-khach-hang header-navbar-item mr-3 font-bold text-base 2xl:m-5 relative">Đối tượng khách hàng</a>
+                    <a href="" class="header-navbar-quy-trinh header-navbar-item mr-3 font-bold text-base 2xl:m-5 relative">Quy trình</a>
+                    <a href="" class="header-navbar-bang-gia header-navbar-item mr-3 font-bold text-base 2xl:m-5 relative">Bảng giá</a>
+                    <a href="" class="header-navbar-feel header-navbar-item mr-3 font-bold 2xl:m-7 text-base relative">Cảm nhận khách hàng</a>
+                    <a href="" class="header-navbar-doi-ngu-bac-si header-navbar-item mr-3 font-bold text-base 2xl:m-5 relative">Đội ngũ bác sĩ</a>
+                    <a href="" class="header-navbar-doi-ngu-bac-si header-navbar-item mr-3 font-bold text-base 2xl:m-5 relative">Hình ảnh & video</a>
+                    <a class="introduce_phone flex border-2 z-10 btn_chung w-40 h-11 text-white" href="tel:+84862515169">
+                      <img src="img/Phone, Call.png" alt="" class="header-navbar-phone-font bg-white rounded-full p-1">
+                      <li class="introduce_phone-text text-base font-bold chan">Gọi 1900 1806</li>
+                    </a>
+                </div>
+            </h1>
+        </div>
+    </div>
+    <div class="header_child header_child-1 fixed w-full mb-3 z-50 xl:hidden">
+      <div class="header_child-above flex items-center px-6 justify-between py-5">
+          <a href="" class="mr-10 h-10 w-44 relative"><img src="img/f4828438fd515c8bac399409750c90fa.png" alt="" class="header-navbar-item-img"></a>
+          <!-- <button class="header_menu text-4xl"><i class="fa-solid fa-bars button_header"></i></button>
+          <button class="header_close text-4xl"><i class="fa-solid fa-xmark button_header"></i></button> -->
+          <a class="header_menu text-4xl">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+      </div>
+      <div class="header-navbar open-sans">
+        <div class="header-navbar-main">
+          <div class="w-44"><a href="" class="mr-2"><img src="img/f4828438fd515c8bac399409750c90fa.png" alt="" class="header-navbar-item-img w-44"></a></div>
+          <div class="header-navbar-bar ml-5 flex flex-col">
+            <a href="" class="header-navbar-gioi-thieu header-navbar-item_1 text-base py-3 px-5 w-full text-left">Giới thiệu</a>
+            <a href="" class="header-navbar-khach-hang header-navbar-item_1 text-base py-3 px-5 w-full text-left">Đối tượng khách hàng</a>
+            <a href="" class="header-navbar-quy-trinh header-navbar-item_1 text-base py-3 px-5 w-full text-left">Quy trình</a>
+            <a href="" class="header-navbar-bang-gia header-navbar-item_1 text-base py-3 px-5 w-full text-left">Bảng giá</a>
+            <a href="" class="header-navbar-feel header-navbar-item_1 text-base py-3 px-5 w-full text-left">Cảm nhận khách hàng</a>
+            <a href="" class="header-navbar-doi-ngu-bac-si header-navbar-item_1 text-base py-3 px-5 w-full text-left">Đội ngũ bác sĩ</a>
+            <a href="tel:+84862515169" class="header-navbar-phone-number header-navbar-item_1"> 
+                <li class="header-navbar-phone-text text-base py-3 px-5 w-full text-left ">Gọi 1900 1806</li>
+            </a>
+          </div>
+
+        </div>
+      </div>
+  </div>
+    <div class="image w-full flex items-center flex-col mt-20">
+      <div class="image_parent xl:w-4/5 flex flex-col text-center items-center open-sans">
+        <div class="w-full sm:w-4/5 flex flex-col items-center">
+          <span class="image_content font-bold w-full sm:w-4/5 text-5xl mb-3">Khám sức khỏe hậu Covid-19</span>
+          <span class="image_content font-bold text-5xl">Để chúng ta đều khỏe mạnh mỗi ngày</span>
+        </div>
+        <span class="image_detail w-9/12 text-base mt-6 mb-10">Bệnh Viện Đa Khoa Phương Đông là địa chỉ uy tín về khám chữa bệnh, với đội ngũ chuyên gia - bác sĩ hàng đầu, trang thiết bị hiện đại, cùng các phác đồ điều trị hiệu quả, khoa học mang đến dịch vụ khám, điều trị, chăm sóc sức khỏe cao cấp, toàn diện với chi phí hợp lý.</span>
+        <a href="" class="image_button w-52 h-11 text-white btn_chung">
+          <span class="chan text-base font-bold">ĐĂNG KÍ TƯ VẤN</span>
+        </a>
+      </div>
+      <div class="panorama-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_0" src="img/7ae8edd5ea9d12603ee2f9d7813f33b1.png" data-swiper-slide-index="0" alt="">
+            </div>
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_1" src="img/Group 9458.png" data-swiper-slide-index="1" alt="">
+            </div>
+            <div class="swiper-slide  slide-next">
+              <img class="slide-image slide-image_2" src="img/Group 9390.png" data-swiper-slide-index="2" alt="">
+            </div>
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_3" src="img/Group 10009.png" data-swiper-slide-index="3" alt="">
+            </div>
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_4" src="img/78d40c5b035cf44b05cf6f8fd336107b.png" data-swiper-slide-index="4" alt="">
+            </div>
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_5" src="img/8c6e98dc9a461778c4361ee30b181d06.png" data-swiper-slide-index="5" alt="">
+            </div>
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_6" src="img/21a320f18c8e4855679a8f6c3b44f623.png" data-swiper-slide-index="6" alt="">
+            </div>
+            <div class="swiper-slide slide-next">
+              <img class="slide-image slide-image_7" src="img/Group 9368.png" data-swiper-slide-index="7" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="my-pagination"></div>
+      <div class="endow_header_infor-button control_endow-0 flex">
+        <div class="hover_prev-img">
+          <button class="control prev_img prev_img-hidden rotate_button mr-2"><img src="img/Group 9311.png" alt="" class="" style="height:45px"></button>
+          <button class="control prev_img-open mr-2"><img src="img/Group 9365.png" alt="" class="" style="height:45px"></button>
+        </div>
+        <div class="hover_next-img">
+          <button class="control next_img next_img-hidden"><img src="img/Group 9311.png" alt="" class="" style="height:45px"></button>
+          <button class="control next_img-open rotate_button"><img src="img/Group 9365.png" alt="" class="" style="height:45px"></button>
+          
+        </div>
+      </div>
+    </div>
+    <div class="inroduce relative flex flex-row mt-32 2xl:overflow-visible overflow-hidden">
+      <div class="introduce_parent relative h-full w-full flex flex-col items-center ">
+        <div class="container">
+          <div class="ỉntroduce_information w-full xl:w-3/5 flex flex-col mb-14 open-sans">
+            <span class="ỉntroduce_information-child ỉntroduce_information-child_0 z-10 content-color text-sm font-bold"">GIỚI THIỆU</span>
+            <span class="ỉntroduce_information-child ỉntroduce_information-child_1 z-10 text-4xl font-bold leading-tight">Dịch vụ Khám sức khỏe hậu Covid-19</span>
+            <span class="ỉntroduce_information-child ỉntroduce_information-child_2 z-10 text-4xl mb-6 font-bold leading-tight">Kiểm tra sức khỏe, tầm soát và điều trị di chứng</span>
+            <span class="ỉntroduce_information-child ỉntroduce_information-child_3 z-10 mb-8 text-base w-full sm:w-4/5">Khám sức khỏe hậu COVID-19 là việc làm cần thiết, giúp chẩn đoán, đánh giá, điều trị và đưa ra biện pháp ngăn chặn từ sớm để giảm thiểu nguy cơ của hội chứng hậu COVID-19 gây hại đến sức khỏe. Với việc kiểm tra sức khỏe hậu COVID-19, người bệnh sẽ được đánh giá chức năng và chẩn đoán bệnh lý liên quan đến tim mạch, phổi, gan, thận; kiểm tra tình trạng viêm và đông máu… từ đó bác sĩ sẽ đưa ra phác đồ điều trị các di chứng COVID-19 hiện tại và phòng ngừa các nguy cơ sức khỏe có thể xảy ra trong tương lai</span>
+            <a class="introduce_phone flex border-2 z-10 btn_chung w-48 h-11  text-white" href="tel:+84862515169">
+              <i class="fa-solid fa-phone-volume introduce_img-phone-font rounded-full text-2xl sm:text-base"></i>
+              <li class="introduce_phone-text text-base font-bold">Gọi cho chúng tôi</li>
+            </a>
+            <img src="img/d 2.png" alt="" class="h-auto introduce_img-top z-0 xl:hidden opacity-30 block absolute xl:static w-auto">
+          </div>
+        </div>
+        <div class="introduce_table flex bottom-0 relative w-11/12 rounded-3xl h-96">
+          <div class="container flex items-center justify-center xl:justify-start open-sans">
+            <div class="introduce_table-child flex flex-col text-center w-full md:w-9/12">
+              <div class="introduce_table-child_content text-white text-center xl:w-4/5">
+                <span class="introduce_table-child_content-1 text-4xl font-bold">ĐĂNG KÍ TƯ VẤN</span>
+                <div class="introduce_table-child_content-2 text-base">Quý khách vui lòng để lại thông tin, chúng tôi sẽ liên hệ lại ngay</div>
+              </div>
+              <div class="introduce_table-child_input my-3 sm:my-8 w-full xl:w-11/12 xl:text-left">
+                <input type="text" class="register_table-input_child register_table-input_child-name w-5/12 2xl:w-2/5 mb-3 mr-3 p-3 rounded-lg text-white" placeholder="Họ và tên (*)">
+                <input type="text" class="register_table-input_child register_table-input_child-phone w-5/12 2xl:w-2/5 mb-3 mr-3 p-3 rounded-lg text-white" placeholder="Số điện thoại(*)">
+                <input type="text" class="register_table-input_child register_table-input_child-email w-5/12 2xl:w-2/5 mb-3 mr-3 p-3 rounded-lg text-white" placeholder="Email của bạn">
+                <input type="text" class="register_table-input_child register_table-input_child-nd w-5/12 2xl:w-2/5 mb-3 mr-3 p-3 rounded-lg text-white" placeholder="Nội dung">
+              </div>
+              <div class="button_parent flex justify-center xl:w-4/5 sm:pr-9">
+                <a href="" class="introduce_input-button hover_white flex rounded-full w-52 h-11 bg-white items-center justify-evenly">
+                  <img src="img/Frame (4).png" alt="" class="introduce_input-button_frame" style="height:24px;">
+                  <span class="introduce_input-button_text chan text-base font-bold">GỬI THÔNG TIN</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+  
+          <img src="img/d 2.png" alt="" class="h-auto introduce_img hidden z-0 xl:block absolute xl:z-10 w-1/2 xl:w-auto">
+        </div>
+      </div>
+    </div>
+    <div class="advantage mt-32 open-sans" style="background-image: url('img/Group 9730.png'); width:100%">
+      <div class="container flex flex-col items-center">
+        <div class="advantage_parent-top hidden sm:flex">
+          <div class="advantage_child-top relative advantage_child-top_0 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-end items-center text-center">
+            <div class="advantage_child-top_img absolute top-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+            <div class="advantage_child-top_da rounded-3xl h-80 xl:h-60 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-xl">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="advantage_child-top_infor text-base">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+            </div>
+          </div>
+          <div class="advantage_child-top relative advantage_child-top_1 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-end items-center text-center">
+            <div class="advantage_child-top_img absolute top-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+            <div class="advantage_child-top_da rounded-3xl h-80 xl:h-60 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-xl">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="advantage_child-top_infor text-base">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+            </div>
+           
+          </div>
+          <div class="advantage_child-top relative advantage_child-top_2 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-end items-center text-center">
+            <div class="advantage_child-top_img absolute top-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+            <div class="advantage_child-top_da rounded-3xl h-80 xl:h-60 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-xl">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="advantage_child-top_infor text-base">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+            </div>
+           
+          </div>
+        </div>
+        <!-- 640px -->
+        <div class="advantage_parent-top flex sm:hidden">
+          <div class="endow_header_infor-button control_endow-0 close_advantage-child">
+            <div class="hover_prev-advantage">
+              <button class="control prev_advantage prev_advantage-hidden rotate_button mr-2"><img src="img/Group 9311.png" alt="" class=""></button>
+              <button class="control prev_advantage prev_advantage-open mr-2"><img src="img/Group 9365.png" alt="" class=""></button>
+            </div>
+            <div class="hover_next-advantage">
+              <button class="control next_advantage next_advantage-hidden"><img src="img/Group 9311.png" alt="" class=""></button>
+              <button class="control next_advantage next_advantage-open rotate_button"><img src="img/Group 9365.png" alt="" class=""></button>
+              
+            </div>
+          </div>
+          <div class="advantage_child-top relative advantage_child-top_hidden-0 h-60 w-full m-1 flex flex-col justify-end items-center text-center">
+            <div class="advantage_child-top_img absolute top-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+            <div class="advantage_child-top_da rounded-3xl h-52 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-base">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="sm:hidden advantage_see-more cursor-pointer text-red-700">Xem thêm</span>
+              <span class="advantage_child-top_infor advantage_child-top_infor-0 text-base hidden">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+              <span class="advantage_hide-less hidden cursor-pointer text-red-700">Ẩn bớt</span>
+            </div>
+           
+          </div>
+          <div class="advantage_child-top relative advantage_child-top_hidden-1 h-60 w-full m-1 flex flex-col justify-end items-center text-center">
+            <div class="advantage_child-top_img absolute top-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+            <div class="advantage_child-top_da rounded-3xl h-52 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-base">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="sm:hidden advantage_see-more cursor-pointer text-red-700">Xem thêm</span>
+              <span class="advantage_child-top_infor advantage_child-top_infor-1 text-base hidden">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+              <span class="advantage_hide-less hidden cursor-pointer text-red-700">Ẩn bớt</span>
+            </div>
+           
+          </div>
+          <div class="advantage_child-top relative advantage_child-top_hidden-2 h-60 w-full m-1 flex flex-col justify-end items-center text-center">
+            <div class="advantage_child-top_img absolute top-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+            <div class="advantage_child-top_da rounded-3xl h-52 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-base">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="sm:hidden advantage_see-more cursor-pointer text-red-700">Xem thêm</span>
+              <span class="advantage_child-top_infor advantage_child-top_infor-2 text-sm hidden">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+              <span class="advantage_hide-less hidden cursor-pointer text-red-700">Ẩn bớt</span>
+            </div>
+           
+          </div>
+        </div>
+        <div class="advantage_parent-top_frame w-2/3">
+          <img src="img/Group 9731.png" alt="advantage_parent-top_frame-img" class="">
+        </div>
+        <div class="advantage_parent-center flex flex-col items-center w-full lg:w-2/3 justify-center h-72 sm:h-52 text-white ">
+          <span class="advantage_parent-center_content text-sm">ƯU ĐIỂM</span>
+          <span class="advantage_parent-center_infor text-4xl sm:text-3xl font-bold w-11/12 text-center leading-tight">Lợi ích của việc sử dụng dịch vụ Khám sức khỏe hậu Covid-19 tại Bệnh viện Phương Đông</span>
+        </div>
+        <div class="advantage_parent-bottom_frame w-2/3">
+          <img src="img/Group 9732.png" alt="" class="advantage_parent-top_frame-img">
+        </div>
+        <div class="advantage_parent-bottom hidden sm:flex">
+          <div class="advantage_child-bottom relative advantage_child-bottom_0 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-start items-center text-center">
+            <div class="advantage_child-top_da rounded-3xl h-80 xl:h-60 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-xl">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="advantage_child-top_infor text-base">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+            </div>
+            <div class="advantage_child-bot_img absolute bottom-0">
+              <img src="img/Frame (6).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+          </div>
+          <div class="advantage_child-bottom relative advantage_child-bottom_1 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-start items-center text-center">
+            <div class="advantage_child-top_da rounded-3xl h-80 xl:h-60 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-xl">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="advantage_child-top_infor text-base">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+            </div>
+            <div class="advantage_child-bot_img absolute bottom-0">
+              <img src="img/Frame (5).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+          </div>
+          <div class="advantage_child-bottom relative advantage_child-bottom_2 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-start items-center text-center">
+            <div class="advantage_child-top_da rounded-3xl h-80 xl:h-60 flex flex-col justify-center ">
+              <span class="advantage_child-top_content font-bold text-xl">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="advantage_child-top_infor text-base">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+            </div>
+            <div class="advantage_child-bot_img absolute bottom-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+          </div>
+        </div>
+        <!-- 640px -->
+        <div class="endow_header_infor-button control_endow-0 close_advantage-child">
+          <div class="hover_prev-advantage">
+            <button class="control prev_advantage prev_advantage-hidden rotate_button mr-2"><img src="img/Group 9311.png" alt="" class=""></button>
+            <button class="control prev_advantage prev_advantage-open mr-2"><img src="img/Group 9365.png" alt="" class=""></button>
+          </div>
+          <div class="hover_next-advantage">
+            <button class="control next_advantage next_advantage-hidden"><img src="img/Group 9311.png" alt="" class=""></button>
+            <button class="control next_advantage next_advantage-open rotate_button"><img src="img/Group 9365.png" alt="" class=""></button>
+            
+          </div>
+        </div>
+        <div class="advantage_parent-bottom flex sm:hidden">
+          <div class="advantage_child-bottom relative advantage_child-bottom_hidden-0 h-60 w-full m-1 flex flex-col justify-start items-center text-center">
+            <div class="advantage_child-top_da rounded-3xl h-52 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-base">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="sm:hidden advantage_see-more_bot cursor-pointer text-red-700">Xem thêm</span>
+              <span class="advantage_child-bottom_infor advantage_child-bottom_infor-0 text-base hidden">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+              <span class="advantage_hide-less_bot hidden cursor-pointer text-red-700">Ẩn bớt</span>
+            </div>
+            <div class="advantage_child-bot_img absolute bottom-0">
+              <img src="img/Frame (6).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+          </div>
+          <div class="advantage_child-bottom relative advantage_child-bottom_hidden-1 h-60 w-full m-1 flex flex-col justify-start items-center text-center">
+            <div class="advantage_child-top_da rounded-3xl h-52 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-base">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="sm:hidden advantage_see-more_bot cursor-pointer text-red-700">Xem thêm</span>
+              <span class="advantage_child-bottom_infor advantage_child-bottom_infor-1 text-base hidden">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+              <span class="advantage_hide-less_bot hidden cursor-pointer text-red-700">Ẩn bớt</span>
+            </div>
+            <div class="advantage_child-bot_img absolute bottom-0">
+              <img src="img/Frame (5).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+          </div>
+          <div class="advantage_child-bottom relative advantage_child-bottom_hidden-2 h-60 w-full m-1 flex flex-col justify-start items-center text-center">
+            <div class="advantage_child-top_da rounded-3xl h-52 flex flex-col justify-center">
+              <span class="advantage_child-top_content font-bold text-base">Đội ngũ bác sĩ giàu y đức</span>
+              <span class="sm:hidden advantage_see-more_bot cursor-pointer text-red-700">Xem thêm</span>
+              <span class="advantage_child-bottom_infor advantage_child-bottom_infor-2 text-base hidden">Bệnh viện Phương Đông thường xuyên cập nhật các kỹ thuật khám bệnh hiện đại cùng cơ sở vật chất tiện nghi cùng hệ thống máy móc y khoa tiên tiến</span>
+              <span class="advantage_hide-less_bot hidden cursor-pointer text-red-700">Ẩn bớt</span>
+            </div>
+            <div class="advantage_child-bot_img absolute bottom-0">
+              <img src="img/Frame (7).png" alt="" class="advantage_child-top_img-ch p-5">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="team relative mt-40 open-sans">
+
+      <img src="img/Star 1.png" alt="" class="team_img-child team_img-child_0 block xl:block absolute p-3 bg-white rounded-3xl">
+      <img src="img/Frame (8).png" alt="" class="team_img-child team_img-child_1 block xl:block absolute bg-white rounded-3xl">
+      <div class="rating-star flex flex-col items-center justify-center absolute bottom-0 bg-white rounded-xl w-52 h-16">
+        <div class="flex">
+          <i class="fa-solid fa-star team_star"></i>
+          <i class="fa-solid fa-star team_star"></i>
+          <i class="fa-solid fa-star team_star"></i>
+          <i class="fa-solid fa-star team_star"></i>
+          <i class="fa-solid fa-star team_star"></i>
+        </div>
+        <span class="">4.8/5 (38 bình chọn)</span>
+      </div>
+      <div class="container team-hidden flex justify-evenly mb-14">
+          <div class="xl:w-1/2 w-3/5 hidden lg:block" style="background-image: url('img/Group 9772.png');background-size: cover;">
+              <div class="hidden"></div>
+          </div>
+          <div class="w-full xl:w-1/2">
+            <div class="team_parent-0_infor w-full ms:w-4/5 flex flex-col">
+              <span class="team_child-0_infor-0 text-base font-semibold content-color mb-3">ĐỘI NGŨ</span>
+              <span class="team_child-0_infor-1 text-4xl mb-10 font-bold leading-tight">Đội ngũ bác sĩ của chúng tôi là những người giàu kinh nghiệm, giàu nhiệt huyết</span>
+              <span class="team_child-0_infor-2 text-base z-10">Đội ngũ bác sĩ Tim mạch, Hô hấp, Nội khoa, Nhi Khoa, Thần kinh, Vật lý trị liệu giàu kinh nghiệm. Với hơn 40 năm kinh nghiệm trong lĩnh vực Nội khoa, thực hiện thăm khám và trực tiếp điều trị cho hàng nghìn bệnh nhân.</span>
+            </div>
+          </div>
+        </div>  
+      <div class="team_parent-1 flex items-end mt-32 md:mt-0">
+        <div class="container flex flex-col md:flex-row items-end justify-evenly">
+          <div class="team_img xl:w-1/2">
+            <img src="img/smiling-asian-female-doctor-shows-thumbs-up-wears-rubber-gloves-clinic-uniform-stands-white-background 3.png" alt="" class="team_img-feature h-60 md:h-auto">
+          </div>
+          
+          <div class="contain-team_parent-1 w-full xl:w-1/2 max-xl:h-auto flex items-center">
+            <div class="team_parent-1_infor overflow-hidden flex flex-col text-white">
+              <div class="team_child-1_slide team_child-1_slide-0 w-full show flex-col">
+                <span class="team_child-1_infor-0 text-3xl font-bold mb-3">Bác sĩ Nguyễn Trung Chính</span>
+                <span class="team_child-1_infor-1 text-base font-medium mb-3 md:mb-8">PGS.TS. Bác sĩ Ung bướu</span> 
+                <span class="team_child-1_infor-2 text-base mb-5 md:mb-16">PGS.TS. Bác sĩ Nguyễn Trung Chính - Nguyên Chủ nhiệm khoa và phụ trách trung tâm tế bào gốc Bệnh viện TW Quân đội 108 là chuyên gia có gần 40 năm kinh nghiệm trong lĩnh Ung bướu và Tế bào gốc. PGS.TS Nguyễn Trung Chính đã giúp hàng nghìn bệnh nhân trên cả nước chẩn đoán và điều trị các vấn đề về ung bướu; thực hiện thành công nhiều kĩ thuật khó trong lĩnh vực tế bào gốc.</span>
+              </div>
+              <div class="team_child-1_slide team_child-1_slide-1 w-full flex-col">
+                <span class="team_child-1_infor-0  text-3xl font-bold mb-3">Bác sĩ Nguyễn Trung Chinh</span>
+                <span class="team_child-1_infor-1 text-base font-medium mb-3  md:mb-8">PGS.TS. Bác sĩ Ung bướu</span> 
+                <span class="team_child-1_infor-2 text-base mb-5 md:mb-16">PGS.TS. Bác sĩ Nguyễn Trung Chính - Nguyên Chủ nhiệm khoa và phụ trách trung tâm tế bào gốc Bệnh viện TW Quân đội 108 là chuyên gia có gần 40 năm kinh nghiệm trong lĩnh Ung bướu và Tế bào gốc. PGS.TS Nguyễn Trung Chính đã giúp hàng nghìn bệnh nhân trên cả nước chẩn đoán và điều trị các vấn đề về ung bướu; thực hiện thành công nhiều kĩ thuật khó trong lĩnh vực tế bào gốc.</span>
+              </div>
+              <div class="team_child-1_slide team_child-1_slide-2 w-full flex-col">
+                <span class="team_child-1_infor-0 text-3xl font-bold mb-3">Bác sĩ Nguyễn Trung Chình</span>
+                <span class="team_child-1_infor-1 text-base font-medium mb-3 md:mb-8">PGS.TS. Bác sĩ Ung bướu</span> 
+                <span class="team_child-1_infor-2 text-base mb-5 md:mb-16">PGS.TS. Bác sĩ Nguyễn Trung Chính - Nguyên Chủ nhiệm khoa và phụ trách trung tâm tế bào gốc Bệnh viện TW Quân đội 108 là chuyên gia có gần 40 năm kinh nghiệm trong lĩnh Ung bướu và Tế bào gốc. PGS.TS Nguyễn Trung Chính đã giúp hàng nghìn bệnh nhân trên cả nước chẩn đoán và điều trị các vấn đề về ung bướu; thực hiện thành công nhiều kĩ thuật khó trong lĩnh vực tế bào gốc.</span>
+              </div>
+              <div class="team_child-1_slide team_child-1_slide-3 w-full flex-col">
+                <span class="team_child-1_infor-0 text-3xl font-bold mb-3">Bác sĩ Nguyễn Trung Chĩnh</span>
+                <span class="team_child-1_infor-1 text-base font-medium mb-3 md:mb-8">PGS.TS. Bác sĩ Ung bướu</span> 
+                <span class="team_child-1_infor-2 text-base mb-5 md:mb-16">PGS.TS. Bác sĩ Nguyễn Trung Chính - Nguyên Chủ nhiệm khoa và phụ trách trung tâm tế bào gốc Bệnh viện TW Quân đội 108 là chuyên gia có gần 40 năm kinh nghiệm trong lĩnh Ung bướu và Tế bào gốc. PGS.TS Nguyễn Trung Chính đã giúp hàng nghìn bệnh nhân trên cả nước chẩn đoán và điều trị các vấn đề về ung bướu; thực hiện thành công nhiều kĩ thuật khó trong lĩnh vực tế bào gốc.</span>
+              </div>
+              <div class="team_child-1_slide team_child-1_slide-4 w-full flex-col">
+                <span class="team_child-1_infor-0 text-3xl font-bold mb-3">Bác sĩ Nguyễn Trung Chỉnh</span>
+                <span class="team_child-1_infor-1 text-base font-medium mb-3 md:mb-8">PGS.TS. Bác sĩ Ung bướu</span> 
+                <span class="team_child-1_infor-2 text-base mb-5 md:mb-16">PGS.TS. Bác sĩ Nguyễn Trung Chính - Nguyên Chủ nhiệm khoa và phụ trách trung tâm tế bào gốc Bệnh viện TW Quân đội 108 là chuyên gia có gần 40 năm kinh nghiệm trong lĩnh Ung bướu và Tế bào gốc. PGS.TS Nguyễn Trung Chính đã giúp hàng nghìn bệnh nhân trên cả nước chẩn đoán và điều trị các vấn đề về ung bướu; thực hiện thành công nhiều kĩ thuật khó trong lĩnh vực tế bào gốc.</span>
+              </div>
+                <div class="team_child-1_slide team_child-1_slide-5 w-full flex-col">
+                  <span class="team_child-1_infor-0 text-3xl font-bold mb-3">Bác sĩ Nguyễn Trung Chịnh</span>
+                  <span class="team_child-1_infor-1 text-base font-medium mb-3 md:mb-8">PGS.TS. Bác sĩ Ung bướu</span> 
+                  <span class="team_child-1_infor-2 text-base mb-5 md:mb-16">PGS.TS. Bác sĩ Nguyễn Trung Chính - Nguyên Chủ nhiệm khoa và phụ trách trung tâm tế bào gốc Bệnh viện TW Quân đội 108 là chuyên gia có gần 40 năm kinh nghiệm trong lĩnh Ung bướu và Tế bào gốc. PGS.TS Nguyễn Trung Chính đã giúp hàng nghìn bệnh nhân trên cả nước chẩn đoán và điều trị các vấn đề về ung bướu; thực hiện thành công nhiều kĩ thuật khó trong lĩnh vực tế bào gốc.</span>
+                </div>
+              <div class="flex justify-between">
+                <div class="flex">
+                  <div class="hover_prev-team">
+                    <button class="control prev_team prev_team-hidden rotate_button mr-2 opacity-30"><img src="img/Group 9311.png" alt="" class="" style="height:45px"></button>
+                    <button class="control prev_team prev_team-open mr-2"><img src="img/Group 9365.png" alt="" class="" style="height:45px"></button>
+                  </div>
+                  <div class="hover_next-team">
+                    <button class="control next_team next_team-hidden opacity-30"><img src="img/Group 9311.png" alt="" class="" style="height:45px"></button>
+                    <button class="control next_team next_team-open rotate_button"><img src="img/Group 9365.png" alt="" class="" style="height:45px"></button>
+                    
+                  </div>
+                </div>
+                <span class="text-base">
+                  <b class="pagination_team pagination_team-0 text-4xl">1/</b>
+                  <b class="pagination_team pagination_team-1 hidden text-4xl">2/</b>
+                  <b class="pagination_team pagination_team-2 hidden text-4xl">3/</b>
+                  <b class="pagination_team pagination_team-3 hidden text-4xl">4/</b>
+                  <b class="pagination_team pagination_team-4 hidden text-4xl">5/</b>
+                  <b class="pagination_team pagination_team-5 hidden text-4xl">6/</b>
+    
+                  6</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+ 
+      </div>
+    </div>
+    <div class="feel open-sans flex flex-col md:flex-row mt-32" style="background-image: url('img/Group (6).png');background-size: 100% 100%;">
+      <div class="feel-left md:w-1/5 lg:w-1/4 hidden md:block">
+        <div class="feel_child-left_0 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="absolute rounded-full sm:p-5 feel_child-left_img-0" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/7ae8edd5ea9d12603ee2f9d7813f33b1.png" alt="" class="feel_child-img-0 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+        <div class="feel_child-left_1 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="absolute rounded-full sm:p-5 feel_child-left_img-1" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="  rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/8c6e98dc9a461778c4361ee30b181d06.png" alt="" class="feel_child-img-1 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+        <div class="feel_child-left_2 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="feel_child-left_img-2 absolute rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/21a320f18c8e4855679a8f6c3b44f623.png" alt="" class="feel_child-img-2 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feel-center md:w-3/5 lg:w-1/2 flex flex-col items-center">
+        <div class="feel-center-content flex flex-col items-center text-center">
+          <span class="feel-center-content-title mb-3">CẢM NHẬN</span>
+          <span class="feel-center-content-infor text-4xl font-bold mb-10">Cảm nhận của khách hàng sau khi sử dụng dịch vụ tại Bệnh viện Phương Đông</span>
+        </div>
+        <div class="feel-center-information w-full 2xl:w-11/12">
+          
+          <div class="feel_child-center_img-feature w-full h-32 rounded-t-3xl">
+            <!-- phàn hình ảnh đừng xóa -->
+            <div class="w-full h-full feel_child-center_img-feature_1 rounded-t-3xl"></div>
+          </div>
+          <div class="feel-center-information_detail bg-white rounded-b-3xl">
+            <div class="sm:px-14 flex flex-col items-center text-center">
+              <div class="feel-center-information_detail-avatar_parent h-16 flex items-end z-10 mb-4">
+                <img src="img/0040aaf03bb63381e909ade696306246.png" alt="" class="feel_border-img rounded-full w-32 h-32 img_feature-feel object-cover">
+              </div>
+              <span class="feel-center-information_detail-name_0 feel-center-information_detail-name text-xl font-bold mb-2">Nguyễn Minh Ánh</span>
+              <span class="feel-center-information_detail-name_1 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguy ễn Minh Ánh</span>
+              <span class="feel-center-information_detail-name_2 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguyễn M inh Ánh</span>
+              <span class="feel-center-information_detail-name_3 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguy ễn Minh Ánh</span>
+              <span class="feel-center-information_detail-name_4 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguyễn MinhÁnh</span>
+              <span class="feel-center-information_detail-name_5 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguyễn Minh Anh</span>
+              <span class="feel-center-information_detail-name_6 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguyễn Minh Anh</span>
+              <span class="feel-center-information_detail-name_7 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguyễn Minh Anh</span>
+              <span class="feel-center-information_detail-name_8 feel-center-information_detail-name text-xl font-bold mb-2 hidden">Nguyễn Minh Anh</span>
+              <div class="flex feel-center-information_detail-star mb-4"> 
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="feel-center-information_detail-content text-lg font-semibold mb-2">
+                Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!
+              </span>
+              <span class="feel-center-information_detail-infor text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed consequat dictumst viverra molestie tortor feugiat. Purus consequat, sapien diam nec. Egestas lacinia scelerisque ultrices vivamus adipiscing diam massa phasellus diam. Sit mi at nibh amet, suscipit dui ornare cursus duis.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feel-left flex md:hidden md:w-1/5 lg:w-1/4">
+        <div class="feel_child-left_0 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="absolute rounded-full sm:p-5 feel_child-left_img-0" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/7ae8edd5ea9d12603ee2f9d7813f33b1.png" alt="" class="feel_child-img-3 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+        <div class="feel_child-left_1 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="absolute rounded-full sm:p-5 feel_child-left_img-1" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="  rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/8c6e98dc9a461778c4361ee30b181d06.png" alt="" class="feel_child-img-4 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+        <div class="feel_child-left_2 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="feel_child-left_img-2 absolute rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/21a320f18c8e4855679a8f6c3b44f623.png" alt="" class="feel_child-img-5 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feel-right flex md:block md:w-1/5 lg:w-1/4">
+        <div class="feel_child-right_0 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="feel_child-right_img-0 absolute rounded-full sm:p-5 " style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/0040aaf03bb63381e909ade696306246.png" alt="" class="feel_child-img-6 feel_child-img rounded-full padding-color w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+        <div class="feel_child-right_1 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="feel_child-right_img-1 absolute rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/78d40c5b035cf44b05cf6f8fd336107b.png" alt="" class="feel_child-img-7 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+          
+        </div>
+        <div class="feel_child-right_2 h-full w-1/3 md:h-1/3 md:w-full flex items-center justify-center relative">
+          <div class="feel_child-right_img-2 absolute rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.05);">
+            <div class="rounded-full sm:p-5" style="background-color: rgb(10, 153, 73, 0.1);">
+              <img src="img/f4a1a2c28b66e17d7d9a60178bae4824.png" alt="" class="feel_child-img-8 feel_child-img rounded-full w-20 h-20 lg:w-28 lg:h-28 object-cover">  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="price_list open-sans mt-32">
+      <div class="container flex flex-col xl:flex-row justify-center">
+        <div class="price_list-infor w-full xl:w-2/5 flex flex-col justify-center mr-12" style="background-image: url('img/Group 9772.png');background-size: cover;">
+          <span class="price_list-infor_content font-bold text-sm color_title">BẢNG GIÁ</span>
+          <span class="price_list-infor_detail font-bold text-4xl leading-tight">Bảng giá dịch vụ niêm yết tại Bệnh viện Phương Đông</span>
+          <div class="price_list-infor_choose-parent flex flex-col ">
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_0 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-0 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CƠ BẢN</span>
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
+              </div>
+            </div>
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_1 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-1 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 NÂNG CAO</span>
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed consequat dictumst viverra molestie tortor feugiat. Purus consequat, sapien diam nec. Egestas lacinia scelerisque ultrices vivamus adipiscing diam massa phasellus diam. Sit mi at nibh amet, suscipit dui ornare cursus duis.</li> 
+              </div>
+            </div>
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_2 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-2 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CHUYÊN SÂU</span>
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
+              </div>
+            </div>
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_3 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-3 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 TẠI NHÀ</span>
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
+              </div>
+            </div>
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_4 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-4 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CHO TRẺ CƠ BẢN ( trẻ từ 0 - 10 tuổi )</span>
+
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
+              </div>
+            </div>
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_5 color fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-5 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 TIÊU CHUẨN</span>
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
+              </div>
+            </div>
+            <div class="price-list-dad mb-5">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_6 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus mr-2 question-plus-6 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 TIÊU CHUẨN</span>
+              <div class="price_list-title_off overflow-hidden rounded-2xl "> 
+                <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
+              </div>
+            </div>
+          </div>
+          <span class=""><br class="text-lg">Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại ngay!<br></span>
+          <div class="price_list-input relative w-full lg:w-4/5"> 
+              <input type="text" class="header_search-input w-full h-14 bg-white rounded-full pr-11 relative my-3 pl-5" placeholder="Nhập số điện thoại...">
+              <a href="" class="price_list-input_button btn_chung absolute flex w-48 h-12 text-white">
+                <div class="register_chan rounded-full flex justify-center items-center" style="height: 36px;width: 37px;">
+                  <img src="img/Frame (3).png" alt="" class="price_list-input_button-frame" style="height:24px;">
+                </div>
+                  
+                  <span class="price_list-input_button-text text-base font-bold">GỬI THÔNG TIN</span>
+              </a>
+          </div>
+        </div>
+        <div class="price_list-img w-full xl:w-1/2 flex justify-center ">
+          <img src="img/75011993_p0_master1200.jpg" alt="" class="price_list-img_child price_list-img_child-0 hidden">
+          <img src="img/75011993_p0_master1200.jpg" alt="" class="price_list-img_child price_list-img_child-1 hidden">
+          <img src="img/75011993_p0_master1200.jpg" alt="" class="price_list-img_child price_list-img_child-2 hidden">
+          <img src="img/75011993_p0_master1200.jpg" alt="" class="price_list-img_child price_list-img_child-3 hidden">
+          <img src="img/75011993_p0_master1200.jpg" alt="" class="price_list-img_child price_list-img_child-4 hidden">
+          <img src="img/e7d925fca5917d042acdcd7345144827.png" alt="" class="price_list-img_child price_list-img_child-5 rounded-2xl">
+          <img src="img/75011993_p0_master1200.jpg" alt="" class="price_list-img_child price_list-img_child-6 hidden">
+        </div>
+      </div>
+
+    </div>
+    <div class="endow relative mt-32">
+      <div class="endow_icon-star_parent absolute h-20 w-20 bg-white flex items-center justify-center  rounded-2xl z-40">
+        <img src="img/Star 5.png" alt="" class= "endow_icon-star z-40 block h-10 w-10 xl:block absolute">
+      </div>
+      <div class="">
+        <img src="img/heart.png" alt="" class="endow_icon-heart z-40 block xl:block absolute bg-white rounded-3xl h-28 w-28"">
+      </div>
+      <div class="">
+        <img src="img/Frame (8).png" alt="" class="endow_icon-like z-40 block xl:block absolute bg-white rounded-3xl">
+      </div>
+      <div class="endow_background flex flex-col sm:flex-row items-end relative justify-evenly">
+        <img src="img/Union (3).png" alt="" class="endow_background-child_0 absolute w-full" style="height:663px;object-fit: cover;">
+        <img src="img/Union (4).png" alt="" class="endow_background-child_1 z-10 w-full absolute" style="height:663px;object-fit: cover;">
+        <img src="img/Union (5).png" alt="" class="endow_background-child_3 z-30 opacity-85 absolute w-full" style="height:663px;object-fit: cover;">
+        <img src="img/Vector 44.png" alt="" class="endow_background-child_2 z-20 absolute hidden w-full">
+        <img src="img/Mask group (2).png" alt="" class="endow_background-child_4 z-20 absolute w-full" style="height:663px;object-fit: cover;">
+        <div class="circle circle-1 rounded-full absolute z-40 h-8 w-8 hidden lg:block" style="top: 40%;left: 95%;"></div>
+        <div class="circle circle-2 rounded-full absolute z-40 h-4 w-4 hidden lg:block" style="top: 76%;left: 90%;"></div>
+        <div class="circle circle-3 rounded-full absolute z-40 h-6 w-6 hidden lg:block" style="top: 50%;left: 50%"></div>
+        <div class="circle circle-4 rounded-full absolute z-40 h-16 w-16 hidden lg:block" style="top: 80%;left: -32px;"></div> 
+        <div class="circle circle-5 rounded-full absolute z-40 h-8 w-8 hidden lg:block" style="top: 60%;left: 100px;"></div>
+
+        <div class="relative flex items-end w-full sm:w-3/5 endow_background-girl justify-center">
+          <img src="img/h 1.png" alt="" class="h-96 sm:h-auto endow_background-girl_0 relative z-40">
+          <img src="img/Frame (9).png" alt="" class=" endow_background-girl_1 absolute right-0 z-30 h-64 hidden xl:block">
+          <img src="img/Group 9618.png" alt="" class=" endow_background-girl_2 lg:w-80 xl:w-3/5 mb-10 relative z-30 hidden xl:block">
+          <div class="flex flex-col sm:flex-row endow_people-like items-center justify-center absolute bg-white rounded-xl sm:w-96 h-24 z-50">
+            <div class="flex pl-2 justify-center">
+              <img src="img/c1179e09b7f552a1557e51d0960c8cc8.png" alt="" class="h-9 w-9 rounded-full object-cover" style="border: solid 2px white;">
+              <img src="img/e88ecd41fef5f698bbcf886a68db38d0.png" alt="" class="h-9 w-9 rounded-full object-cover" style="transform: translateX(-10px);border: solid 2px white;">
+              <img src="img/7ae8edd5ea9d12603ee2f9d7813f33b1.png" alt="" class="h-9 w-9 rounded-full object-cover" style="transform: translateX(-20px);border: solid 2px white;">
+              <img src="img/8c6e98dc9a461778c4361ee30b181d06.png" alt="" class="h-9 w-9 rounded-full object-cover" style="transform: translateX(-30px);border: solid 2px white;">
+            </div>
+            <span class="w-56 flex pr-2 justify-center open-sans">Trang, Huyền và 169 người khác thích điều này</span>
+          </div>
+        </div>
+        <div class="endow_detail relative flex flex-col mt-52 items-center w-full mb-8 sm:mb-12 sm:w-2/5">
+          <span class="z-30 text-white text-5xl font-bold baloo-bhai-2">Ưu đãi tới</span>
+          <span class="endow_detail-per z-30 text-9xl mb-4 font-extrabold open-sans">50%</span> 
+          <span class="z-30 font-bold text-4xl mb-11 text-white text-center baloo-bhai-2">Gói khám sức khỏe hậu Covid-19 cho trẻ</span>
+          <div class="flex endow_times relative mb-11 z-40 open-sans">
+            <div id="endow_days" class="endow_times-child" style=" background-color: rgb(255,255,255,0.4);border-radius: 7px;border: 2px solid white; margin:5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+              <span id="days_number"></span>
+              <h1 class="text-white">Day</h1>
+            </div>
+            <div id="endow_hours" class="endow_times-child" style=" background-color: rgb(255,255,255,0.4);border-radius: 7px;border: 2px solid white; margin:5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+              <span id="hours_number"></span>
+              <span class="text-white">Hrs</span>
+            </div>
+            <div id="endow_minutes" class="endow_times-child" style=" background-color: rgb(255,255,255,0.4);border-radius: 7px;border: 2px solid white; margin:5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+              <span id="minutes_number"></span>
+              <span class="text-white">Minus</span>
+            </div>
+            <div id="endow_seconds" class="endow_times-child" style=" background-color: rgb(255,255,255,0.4);border-radius: 7px;border: 2px solid white; margin:5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+              <span id="seconds_number"></span>
+              <span class="text-white">Secs</span>
+            </div>
+          </div>
+          <span id="time_end" class="open-sans z-40 mb-4 text-white"></span>
+          <a href="" class="introduce_input-button z-30 hover_white flex rounded-full w-52 h-11 bg-white items-center justify-evenly open-sans">
+            <img src="img/Frame (4).png" alt="" class="introduce_input-button_frame" style="height:19px;">
+            <span class="introduce_input-button_text chan text-base font-bold">GỬI THÔNG TIN</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="" class="show-mess">
+      <span class=""></span>
+      <span class=""></span>
+      <span class="">
+        <img src="" alt="" class="">
+      </span>
+    </a>
+    <a class="back-to-top" href="#">
+      <i class="fa-solid fa-angles-up text-xs"></i>
+      <p class="text-xs">Top</p>
+    </a>
+    <div class="footer open-sans text-white flex items-center" style="background-image: url('img/Group 10024.jpg'); width:100%;background-size: cover;">
+      <div class="container flex flex-col lg:flex-row-reverse justify-center items-center">
+        <div class="register_table w-full md:w-4/5 lg:w-2/5">
+          <div class="register_table-content mt-18 sm:mt-0 flex flex-col">
+              <span class="register_table-content_1 text-xl text-center font-bold text-white mt-4">ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</span>
+              <span class="register_table-content_2 text-sm mb-4 text-center leading-tight">Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp thời!</span>
+          </div>
+          <div class="register_table-input bg-white">
+              <div class="register_table-input_parent flex flex-col py-5 sm:pr-10 pr-5 pl-5 sm:pl-10">
+                  <input type="text" class="register_table-input_child-footer my-2 px-3 h-11 register_table-input_child-name text-black" placeholder="Họ và tên (*)" style="width: 100%;">
+                  <input type="text" class="register_table-input_child-footer my-2 px-3 h-11 register_table-input_child-phone text-black" placeholder="Số điện thoại (*)" style="width: 100%;">
+                  <input type="text" class="register_table-input_child-footer my-2 px-3 h-11 register_table-input_child-mail text-black" placeholder="E-mail" style="width: 100%;">
+                  <input type="text" class="register_table-input_child-footer my-2 px-3 h-20 pb-12 register_table-input_child_content text-black" placeholder="Nội dung..." style="width: 100%;">
+              </div>
+              <a href="" class="register_table-button flex justify-center">
+                  <button class="register_table-input_child btn_chung hover_orange h-12 w-52">
+                      <div class="register_chan rounded-full flex justify-center items-center" style="height: 36px;width: 37px;">
+                        <img src="img/Group (1).png" alt="" class="button-information_header-text-child-font">
+                      </div>
+                      
+                      <li class="button-information_header-text-child-text"> Đăng kí tư vấn</li> </button>
+                  </button>
+                </a>
+              
+          </div>
+      </div>
+      <div class="flex flex-col w-full mt-20 lg:mt-0 lg:w-3/5">
+          <a href="" class=" mb-10"><img src="img/207d145b20151581166b0ea208787404.png" alt="" class="footer_img"></a>
+          <span class="text-xl font-bold my-4">BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG</span>
+          <span class=" text-lg my-2"><b class="font-bold text-base">Địa chỉ:</b> Số 9, Phố Viên, P. Cổ Nhuế 2, Q. Bắc Từ Liêm, HN</span>
+          <div class="font-bold text-base footer_gmail"><span class="">Email:&nbsp;</span><a href="" class="footer_name-gmail sm:text-lg my-2 text-base hover_orange">bvphuongdong@phuongdonghospital.vn</a></div>
+          <div class="text-lg mb-8"><span class="">Hotline:&nbsp;</span><a href="" class=" sm:text-lg my-2 text-base hover_orange font-bold"> 1900 1806</a></div>
+          <div class="mb-8 sm:mb-14">
+            <a href="" class="footer-item_link mr-6"><i class="text-4xl footer-item_link-icon fa-brands fa-facebook"></i></a>
+            <a href="" class="footer-item_link mr-6"><i class="text-4xl footer-item_link-icon fa-brands fa-instagram"></i></a>
+            <a href="" class="footer-item_link mr-6"><i class="text-4xl fa-brands fa-youtube footer-item_link-icon"></i></a>
+            <a href="" class="footer-item_link mr-6"><i class="text-4xl footer-item_link-icon fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="flex flex-col sm:flex-row">
+            <div class="footer_parent sm:mr-7">
+              <h3 class="footer_child-content font-bold text-xl">Thời gian mở cửa</h3>
+              <div class="footer_child-detail flex">
+                  <ul class="footer_child-detail_1">
+                      <li class=" text-lg">Thứ 2 - Chủ nhật:</li>
+                      <li class=" text-lg">Cấp cứu 24/7:</li>
+                  </ul>
+                  <ul class="footer_child-detail_2 text-lg text-right">
+                      <li class=" text-lg">&nbsp;07:30 - 19:00</li>
+                      <a class="hover_orange" href="tel:+84862515169">
+                        <li class="footer_child-detail_2-li text-lg hover_orange font-bold">&nbsp;0833 015 115</li>
+                    </a>
+                  </ul>
+              </div>
+            </div>
+              <div class="footer_parent sm:mr-7">
+                <h3 class="footer_child-content font-bold text-xl">Liên hệ</h3>
+                <div class="footer_child-detail flex">
+                    <ul class="footer_child-detail_1 text-lg">
+                        <li class="text-1g">Hotline tiêm chủng :</li>
+                        <li class="text-1g">Hotline khoa sản :</li>
+                    </ul>
+                    <ul class="footer_child-detail_2">
+                        <a class="hover_orange" href="tel:+84862515169">
+                            <li class="footer_child-detail_2-li text-lg hover_orange font-bold">&nbsp;&nbsp;0911 615 115</li>
+                        </a>
+                        <a class="" href="tel:+84862515169 text-lg">
+                            <li class="footer_child-detail_2-li text-lg hover_orange font-bold">&nbsp;&nbsp;0911 615 115</li>
+                        </a>
+                    </ul>
+                </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+<script src="./chan.js"></script>
+</body>
+
+</html>

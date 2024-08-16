@@ -34,9 +34,9 @@ img.nghich {
     transition: all .3s ease;
     color:white;   
 }
-.btn_chung:hover{
-    transition: all .7s ease;
-    box-shadow: 0px 8px 16px 0px #35DF8066;
+
+.hover_green:hover{
+    transition: all .5s ease;
     background: linear-gradient(#3EED8B, #0A9949);
     background-clip: text;
     color: transparent;
@@ -233,9 +233,6 @@ span.bar.x.open {
 }
 .header-navbar-main .header-navbar-bar{
     border-left: solid 1px #e1e1e1;
-}
-.image_button{
-    background: linear-gradient(#3EED8B,#0A9949);
 }
 .img_center{
     transform: translateX(-0.000140192px) translateZ(-249.954px) rotateY(-0.525486deg) !important;
@@ -516,14 +513,22 @@ img.team_img-child.team_img-child_1 {
     text-decoration: line-through #3EED8B;
     margin-left: 8px;
 }
+
+/* sửa phần js ở phần button */
 .btn_chung{
     display: flex;
-    background: linear-gradient(to right, #3EED8B, #0A9949);
+    background: #3EED8B;
     border-radius: 100px;
     align-items: center;
     justify-content: space-evenly;
+    transition: all 1s ease;    
 }
-
+.btn_chung:hover{
+    box-shadow: 0px 8px 16px 0px #35DF8066;
+    background: white;
+    color:#3EED8B;
+    transition: all 1s ease;
+}
 .price_list-infor_content::after {
     content: "-----";
     font-size: 16px;

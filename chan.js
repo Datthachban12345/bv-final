@@ -1,6 +1,7 @@
 src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
 src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
 
+// phần menu
 let navToggle = document.querySelector('.header_menu');
 let headerNavbar = document.querySelector('.header-navbar');
 var headerClick = document.querySelector('.header-navbar-main');

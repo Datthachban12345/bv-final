@@ -273,7 +273,45 @@ function scrollFunction() {
     const clickInterval = currentTime - lastClickTime;
   
     if (clickInterval < maxClickInterval) {
-      alert('Warning:  ấn chậm thôi hỏng chuột h!');
+      if(X == 0){
+        hiddenTeam[X].classList.add('hide');
+        hiddenTeam[X].classList.remove('show');
+        pagination.forEach(pluss => {
+          pluss.classList.add('hidden');
+        });
+        replace = hiddenTeam.length - 1;
+        pagination[replace].classList.remove('hidden');
+        setTimeout(function (){
+          hiddenTeam[replace].classList.add('set');
+          setTimeout(function (){
+            hiddenTeam[replace].classList.add('show');
+            hiddenTeam[replace].classList.remove('set');
+          }, 1);
+  
+          hiddenTeam.forEach(cong => {
+            cong.classList.remove('hide');
+          });
+        }, 40);
+     
+      }else{
+        hiddenTeam[X].classList.add('hide');
+        hiddenTeam[X].classList.remove('show');
+        pagination.forEach(pluss => {
+          pluss.classList.add('hidden');
+        });
+        replace = X - 1;
+        pagination[replace].classList.remove('hidden');
+        setTimeout(function (){
+          hiddenTeam[replace].classList.add('set');
+          setTimeout(function (){
+            hiddenTeam[replace].classList.add('show');
+            hiddenTeam[replace].classList.remove('set');
+          }, 1);
+          hiddenTeam.forEach(cong => {
+            cong.classList.remove('hide');
+          });
+        }, 40);
+      }
     }else{
       if(X == 0){
         hiddenTeam[X].classList.add('hide');
@@ -319,7 +357,43 @@ function scrollFunction() {
       const clickInterval = currentTime - lastClickTime;
     
       if (clickInterval < maxClickInterval) {
-        alert('Warning: ấn chậm thôi hỏng chuột h!');
+        if(X == hiddenTeam.length -1){
+          hiddenTeam[X].classList.add('hide1');
+          hiddenTeam[X].classList.remove('show');
+          pagination.forEach(pluss => {
+            pluss.classList.add('hidden');
+          });
+          replace = 0
+          pagination[replace].classList.remove('hidden');
+          setTimeout(function (){
+            hiddenTeam[replace].classList.add('set');
+            setTimeout(function (){
+              hiddenTeam[replace].classList.add('show');
+              hiddenTeam[replace].classList.remove('set');
+            }, 1);
+            hiddenTeam.forEach(cong => {
+              cong.classList.remove('hide1');
+            });
+          }, 40);
+        }else{
+          hiddenTeam[X].classList.add('hide1');
+          hiddenTeam[X].classList.remove('show');
+          pagination.forEach(pluss => {
+            pluss.classList.add('hidden');
+          });
+          replace = X + 1;
+          pagination[replace].classList.remove('hidden');
+          setTimeout(function (){
+            hiddenTeam[replace].classList.add('set');
+            setTimeout(function (){
+              hiddenTeam[replace].classList.add('show');
+              hiddenTeam[replace].classList.remove('set');
+            }, 1);
+            hiddenTeam.forEach(cong => {
+              cong.classList.remove('hide1');
+            });
+          }, 40);
+        }
       }else{
       if(X == hiddenTeam.length -1){
         hiddenTeam[X].classList.add('hide1');

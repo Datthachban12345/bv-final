@@ -32,7 +32,6 @@
     }
   
     body {
-      
       background: #eee;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
@@ -86,6 +85,9 @@
     }
     .question-plus.text-4xl{
       font-size: 2.125rem;
+    }
+    .question-minus.text-4xl{
+      font-size:2.125rem;
     }
     .text-3xl{
       font-size:1.125rem;
@@ -225,17 +227,22 @@
     <div class="inroduce relative flex flex-row mt-32 2xl:overflow-visible overflow-hidden">
       <div class="introduce_parent relative h-full w-full flex flex-col items-center ">
         <div class="container">
-          <div class="ỉntroduce_information w-full xl:w-3/5 flex flex-col mb-14 open-sans">
-            <span class="ỉntroduce_information-child ỉntroduce_information-child_0 z-10 content-color text-sm font-bold"">GIỚI THIỆU</span>
-            <span class="ỉntroduce_information-child ỉntroduce_information-child_1 z-10 text-4xl font-bold leading-tight">Dịch vụ Khám sức khỏe hậu Covid-19</span>
-            <span class="ỉntroduce_information-child ỉntroduce_information-child_2 z-10 text-4xl mb-6 font-bold leading-tight">Kiểm tra sức khỏe, tầm soát và điều trị di chứng</span>
-            <span class="ỉntroduce_information-child ỉntroduce_information-child_3 z-10 mb-8 text-base w-full sm:w-4/5">Khám sức khỏe hậu COVID-19 là việc làm cần thiết, giúp chẩn đoán, đánh giá, điều trị và đưa ra biện pháp ngăn chặn từ sớm để giảm thiểu nguy cơ của hội chứng hậu COVID-19 gây hại đến sức khỏe. Với việc kiểm tra sức khỏe hậu COVID-19, người bệnh sẽ được đánh giá chức năng và chẩn đoán bệnh lý liên quan đến tim mạch, phổi, gan, thận; kiểm tra tình trạng viêm và đông máu… từ đó bác sĩ sẽ đưa ra phác đồ điều trị các di chứng COVID-19 hiện tại và phòng ngừa các nguy cơ sức khỏe có thể xảy ra trong tương lai</span>
-            <a class="introduce_phone flex border-2 z-10 btn_chung w-48 h-11  text-white" href="tel:+84862515169">
-              <i class="fa-solid fa-phone-volume introduce_img-phone-font rounded-full text-2xl sm:text-base"></i>
-              <li class="introduce_phone-text text-base font-bold">Gọi cho chúng tôi</li>
-            </a>
-            <img src="img/d 2.png" alt="" class="h-auto introduce_img-top z-0 xl:hidden opacity-30 block absolute xl:static w-auto">
+          <div class="w-full flex">
+            <div class="introduce_information w-full xl:w-3/5 flex flex-col mb-14 open-sans">
+              <span class="introduce_information-child introduce_information-child_0 z-10 content-color text-sm font-bold"">GIỚI THIỆU</span>
+              <span class="introduce_information-child introduce_information-child_1 z-10 text-4xl font-bold leading-tight">Dịch vụ Khám sức khỏe hậu Covid-19</span>
+              <span class="introduce_information-child introduce_information-child_2 z-10 text-4xl mb-6 font-bold leading-tight">Kiểm tra sức khỏe, tầm soát và điều trị di chứng</span>
+              <span class="introduce_information-child introduce_information-child_3 z-10 mb-8 text-base w-full sm:w-4/5">Khám sức khỏe hậu COVID-19 là việc làm cần thiết, giúp chẩn đoán, đánh giá, điều trị và đưa ra biện pháp ngăn chặn từ sớm để giảm thiểu nguy cơ của hội chứng hậu COVID-19 gây hại đến sức khỏe. Với việc kiểm tra sức khỏe hậu COVID-19, người bệnh sẽ được đánh giá chức năng và chẩn đoán bệnh lý liên quan đến tim mạch, phổi, gan, thận; kiểm tra tình trạng viêm và đông máu… từ đó bác sĩ sẽ đưa ra phác đồ điều trị các di chứng COVID-19 hiện tại và phòng ngừa các nguy cơ sức khỏe có thể xảy ra trong tương lai</span>
+              <a class="introduce_phone flex border-2 z-10 btn_chung w-48 h-11  text-white" href="tel:+84862515169">
+                <i class="fa-solid fa-phone-volume introduce_img-phone-font rounded-full text-2xl sm:text-base"></i>
+                <li class="introduce_phone-text text-base font-bold">Gọi cho chúng tôi</li>
+              </a>
+              <img src="img/d 2.png" alt="" class="h-auto introduce_img-top z-0 xl:hidden opacity-30 block absolute xl:static w-auto">
+            </div>
+            <div class="xl:w-1/2 w-2/5 hidden lg:block">
+              <img src="img/Group 9772.png" alt="" class="w-3/5" style="background-size: cover;background-repeat: no-repeat;transform: translateX(236px) translateY(-91px);">
           </div>
+          </div>          
         </div>
         <div class="introduce_table flex bottom-0 relative w-11/12 rounded-3xl h-96">
           <div class="container flex items-center justify-center xl:justify-start open-sans">
@@ -264,7 +271,7 @@
         </div>
       </div>
     </div>
-    <div class="advantage mt-32 open-sans" style="background-image: url('img/Group 9730.png'); width:100%">
+    <div class="advantage mt-32 open-sans" style="background-image: url('img/Group 9772.png'); width:100%;background-size: contain;background-repeat: no-repeat;">
       <div class="container flex flex-col items-center">
         <div class="advantage_parent-top hidden sm:flex">
           <div class="advantage_child-top relative advantage_child-top_0 h-96 xl:h-72 w-2/5 m-5 flex flex-col justify-end items-center text-center">
@@ -350,7 +357,7 @@
         <div class="advantage_parent-top_frame w-2/3">
           <img src="img/Group 9731.png" alt="advantage_parent-top_frame-img" class="">
         </div>
-        <div class="advantage_parent-center flex flex-col items-center w-full lg:w-2/3 justify-center h-72 sm:h-52 text-white ">
+        <div class="advantage_parent-center flex flex-col items-center w-full lg:w-2/3 justify-center h-28 sm:h-52 text-white ">
           <span class="advantage_parent-center_content text-sm">ƯU ĐIỂM</span>
           <span class="advantage_parent-center_infor text-4xl sm:text-3xl font-bold w-11/12 text-center leading-tight">Lợi ích của việc sử dụng dịch vụ Khám sức khỏe hậu Covid-19 tại Bệnh viện Phương Đông</span>
         </div>
@@ -451,8 +458,8 @@
         <span class="">4.8/5 (38 bình chọn)</span>
       </div>
       <div class="container team-hidden flex justify-evenly mb-14">
-          <div class="xl:w-1/2 w-3/5 hidden lg:block" style="background-image: url('img/Group 9772.png');background-size: cover;">
-              <div class="hidden"></div>
+          <div class="xl:w-1/2 w-3/5 hidden lg:block">
+              <img src="img/Group 9772.png" alt="" class="w-1/3 absolute" style="background-size: contain;background-repeat: no-repeat;transform: translateX(139px) translateY(-172px);z-index:-2;">
           </div>
           <div class="w-full xl:w-1/2">
             <div class="team_parent-0_infor w-full ms:w-4/5 flex flex-col">
@@ -554,6 +561,9 @@
         </div>
       </div>
       <div class="feel-center md:w-3/5 lg:w-1/2 flex flex-col items-center">
+        <div class="xl:w-1/2 w-3/5 hidden lg:block">
+          <img src="img/Group 9772.png" alt="" class="w-1/5" style="position:absolute;background-size: contain;background-repeat: no-repeat;transform: translateY(-144px) translateX(65px);">
+      </div>
         <div class="feel-center-content flex flex-col items-center text-center">
           <span class="feel-center-content-title mb-3">CẢM NHẬN</span>
           <span class="feel-center-content-infor text-4xl font-bold mb-10">Cảm nhận của khách hàng sau khi sử dụng dịch vụ tại Bệnh viện Phương Đông</span>
@@ -645,55 +655,55 @@
     </div>
     <div class="price_list open-sans mt-32">
       <div class="container flex flex-col xl:flex-row justify-center">
-        <div class="price_list-infor w-full xl:w-2/5 flex flex-col justify-center mr-12" style="background-image: url('img/Group 9772.png');background-size: cover;">
+        <div class="price_list-infor w-full xl:w-2/5 flex flex-col justify-center mr-12" style="background-image: url('img/Group 9772.png');background-size: contain;background-repeat: no-repeat;">
           <span class="price_list-infor_content font-bold text-sm color_title">BẢNG GIÁ</span>
           <span class="price_list-infor_detail font-bold text-4xl leading-tight">Bảng giá dịch vụ niêm yết tại Bệnh viện Phương Đông</span>
           <div class="price_list-infor_choose-parent flex flex-col ">
-            <div class="price-list-dad mb-5">
-              <span class="price_list-infor_choose-child price_list-infor_choose-child_0 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-0 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CƠ BẢN</span>
+            <div class="price-list-dad">
+              <span class="price_list-infor_choose-child price_list-infor_choose-child_0 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-0 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CƠ BẢN</span>
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
               </div>
             </div>
-            <div class="price-list-dad mb-5">
+            <div class="price-list-dad">
               <span class="price_list-infor_choose-child price_list-infor_choose-child_1 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-1 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 NÂNG CAO</span>
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed consequat dictumst viverra molestie tortor feugiat. Purus consequat, sapien diam nec. Egestas lacinia scelerisque ultrices vivamus adipiscing diam massa phasellus diam. Sit mi at nibh amet, suscipit dui ornare cursus duis.</li> 
               </div>
             </div>
-            <div class="price-list-dad mb-5">
+            <div class="price-list-dad">
               <span class="price_list-infor_choose-child price_list-infor_choose-child_2 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-2 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CHUYÊN SÂU</span>
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
               </div>
             </div>
-            <div class="price-list-dad mb-5">
+            <div class="price-list-dad">
               <span class="price_list-infor_choose-child price_list-infor_choose-child_3 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-3 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 TẠI NHÀ</span>
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
               </div>
             </div>
-            <div class="price-list-dad mb-5">
+            <div class="price-list-dad">
               <span class="price_list-infor_choose-child price_list-infor_choose-child_4 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-4 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 CHO TRẺ CƠ BẢN ( trẻ từ 0 - 10 tuổi )</span>
 
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
               </div>
             </div>
-            <div class="price-list-dad mb-5">
+            <div class="price-list-dad">
               <span class="price_list-infor_choose-child price_list-infor_choose-child_5 color fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus question-plus-5 mr-2 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 TIÊU CHUẨN</span>
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
               </div>
             </div>
-            <div class="price-list-dad mb-5">
+            <div class="price-list-dad">
               <span class="price_list-infor_choose-child price_list-infor_choose-child_6 fontsemibold text-base my-2 cursor-pointer flex items-center""><i class="fa-solid fa-circle-plus question-plus mr-2 question-plus-6 text-4xl sm:text-3xl color"></i><i class="fa-solid fa-circle-minus hidden question-minus mr-2 text-4xl sm:text-3xl color"></i>Gói khám sức khỏe hậu COVID-19 TIÊU CHUẨN</span>
               <div class="price_list-title_off overflow-hidden rounded-2xl "> 
                 <li class="price_list-title price_list-title_2">như này đã đợc chưa anh</li> 
               </div>
             </div>
           </div>
-          <span class=""><br class="text-lg">Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại ngay!<br></span>
+          <span class="text-lg font-bold">Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại ngay</span>
           <div class="price_list-input relative w-full lg:w-4/5"> 
               <input type="text" class="header_search-input w-full h-14 bg-white rounded-full pr-11 relative my-3 pl-5" placeholder="Nhập số điện thoại">
               <a href="" class="price_list-input_button btn_chung absolute flex w-48 h-12 text-white">
@@ -715,7 +725,7 @@
 
     </div>
     <div class="endow relative mt-32">
-      <div class="endow_icon-star_parent absolute h-20 w-20 bg-white flex items-center justify-center  rounded-2xl z-40">
+      <div class="endow_icon-star_parent absolute h-20 w-20 bg-white flex items-center justify-center  rounded-2xl z-40" style="left:-2px;">
         <img src="img/Star 5.png" alt="" class= "endow_icon-star z-40 block h-10 w-10 xl:block absolute">
       </div>
       <div class="">
@@ -730,13 +740,14 @@
         <img src="img/Union (5).png" alt="" class="endow_background-child_3 z-30 opacity-85 absolute w-full" style="height:663px;object-fit: cover;">
         <img src="img/Vector 44.png" alt="" class="endow_background-child_2 z-20 absolute hidden w-full">
         <img src="img/Mask group (2).png" alt="" class="endow_background-child_4 z-20 absolute w-full" style="height:663px;object-fit: cover;">
+        
         <div class="circle circle-1 rounded-full absolute z-40 h-8 w-8 hidden lg:block" style="top: 40%;left: 95%;"></div>
         <div class="circle circle-2 rounded-full absolute z-40 h-4 w-4 hidden lg:block" style="top: 76%;left: 90%;"></div>
         <div class="circle circle-3 rounded-full absolute z-40 h-6 w-6 hidden lg:block" style="top: 50%;left: 50%"></div>
         <div class="circle circle-4 rounded-full absolute z-40 h-16 w-16 hidden lg:block" style="top: 80%;left: -32px;"></div> 
         <div class="circle circle-5 rounded-full absolute z-40 h-8 w-8 hidden lg:block" style="top: 60%;left: 100px;"></div>
 
-        <div class="relative flex items-end w-full sm:w-2/5 endow_background-girl justify-center sm:justify-start">
+        <div class="relative flex items-end w-full sm:w-2/5 endow_background-girl justify-center sm:justify-start" >
           <img src="img/h 1.png" alt="" class="h-96 sm:h-auto endow_background-girl_0 relative z-40">
           <img src="img/Frame (9).png" alt="" class=" endow_background-girl_1 absolute right-0 z-30 h-64 hidden xl:block">
           <img src="img/Group 9618.png" alt="" class=" endow_background-girl_2 lg:w-80 xl:w-3/5 mb-10 relative z-30 hidden xl:block">
@@ -791,7 +802,7 @@
       <i class="fa-solid fa-angles-up text-xs"></i>
       <p class="text-xs">Top</p>
     </a>
-    <div class="footer open-sans text-white flex items-center" style="background-image: url('img/Group 10024.jpg'); width:100%;background-size: cover;">
+    <div class="footer open-sans text-white flex items-center" style="background-image: url('img/Group 10024.jpg'); width:100%;background-size: cover;border-top:4px solid orange;">
       <div class="container flex flex-col lg:flex-row-reverse justify-center items-center">
         <div class="register_table w-full md:w-4/5 lg:w-2/5">
           <div class="register_table-content mt-18 sm:mt-0 flex flex-col">
@@ -815,7 +826,7 @@
           </div>
       </div>
       <div class="flex flex-col w-full mt-20 lg:mt-0 lg:w-3/5">
-          <a href="" class=" mb-10"><img src="img/207d145b20151581166b0ea208787404.png" alt="" class="footer_img"></a>
+          <a href="" class=" mb-2"><img src="img/207d145b20151581166b0ea208787404.png" alt="" class="footer_img"></a>
           <span class="text-xl font-bold my-4">BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG</span>
           <span class=" text-lg my-2"><b class="font-bold text-base">Địa chỉ:</b> Số 9, Phố Viên, P. Cổ Nhuế 2, Q. Bắc Từ Liêm, HN</span>
           <div class="font-bold text-base footer_gmail"><span class="">Email:&nbsp;</span><a href="" class="footer_name-gmail sm:text-lg my-2 text-base hover_orange">bvphuongdong@phuongdonghospital.vn</a></div>

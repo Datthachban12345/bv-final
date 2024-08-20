@@ -547,11 +547,11 @@ buttonMinus2.forEach(function(imgItem,X){
 
         // Cập nhật đồng hồ đếm ngược mỗi giây
         setInterval(updateCountdown, 1000);
-const nameItemsss = document.querySelector(".swiper-slide");
-const transformValue = nameItemsss.offsetWidth;
-const swiper = new Swiper('.swiper', {
-  pagination: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-next",
-        },
-});
+// const nameItemsss = document.querySelector(".swiper-slide");
+// const transformValue = nameItemsss.offsetWidth;
+// const swiper = new Swiper('.swiper', {
+//   pagination: {
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-next",
+//         },
+// });

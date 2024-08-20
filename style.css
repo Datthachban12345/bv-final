@@ -105,7 +105,10 @@ span.bar.x.open {
     transition: all 500ms ease-in-out;
     transform-origin: center;
     width: 0;
+    
 }
+
+
 
 .x:nth-of-type(3) {
     transition: all 500ms ease-in-out;
@@ -117,16 +120,14 @@ span.bar.x.open {
     background: linear-gradient(to right,#3EED8B, #0A9949);
     background-clip: text;
     color: transparent;
+    transition: all 500ms ease-in-out;
 }
+
 .color_title{
     background: linear-gradient(to right,#3EED8B, #0A9949);
     background-clip: text;
     color: transparent;
-}
-.color:hover{
-    background:rgb(240, 240, 240);
-    background-clip: inherit;
-    color: black;
+    transition: all 500ms ease-in-out;
 }
 .close{
     display:none;
@@ -383,11 +384,14 @@ a.introduce_phone.flex.border-2.border-solid.rounded-full.w-64.h-16.text-white.i
     border-radius: 100%;
     background: linear-gradient(#3EED8B, #0A9949);
     transform: translateY(10px);
+    box-shadow: 0px 8px 16px 0px #0A994959;
 }
 .advantage_child-bot_img {
     border-radius: 100%;
     background: linear-gradient(#3EED8B, #0A9949);
     transform: translateY(-10px);
+    box-shadow: 0px 8px 16px 0px #0A994959;
+
 }
 .advantage_child-top_da {
     background-color: #EAFAF1;
@@ -517,17 +521,18 @@ img.team_img-child.team_img-child_1 {
 /* sửa phần js ở phần button */
 .btn_chung{
     display: flex;
-    background: #0A9949;
+    background: #5ec58b;
     border-radius: 100px;
     align-items: center;
     justify-content: space-evenly;
-    transition: all .5s ease;    
+    box-shadow: 0px 8px 20px 0px #00E26466;
+    transition: all .7s ease;    
 }
 .btn_chung:hover{
     box-shadow: 0px 8px 20px 0px #00E26466;
     background: white;
-    color:#0A9949;
-    transition: all .5s ease;
+    color:#5ec58b;
+    transition: all .7s ease;
 }
 .price_list-infor_content::after {
     content: "-----";

@@ -20,6 +20,7 @@ img.nghich {
 .rotate_button{
     transform: rotate(180deg);
 }
+
 .hover_white:hover{
     transition: all .5s ease;
     box-shadow: 0px 8px 16px 0px #FFFFFF59;
@@ -34,7 +35,13 @@ img.nghich {
     transition: all .3s ease;
     color:white;   
 }
-
+.hover_white > .introduce_input-button_frame  {
+    transition: all .7s ease;
+    filter: brightness(1) invert(0);
+}
+.hover_white >.introduce_input-button_text  {
+    transition: all .7s ease; 
+}
 .hover_green:hover{
     transition: all .5s ease;
     background: linear-gradient(#3EED8B, #0A9949);
@@ -270,26 +277,7 @@ span.bar.x.open {
     left:-485px;
     transition: all 0.3s ease; 
 }
-.prev_img-hidden{
-    display:none;
-}
-.next_img-hidden{
-    display:none;
-}
-.hover_prev-img:hover > .prev_img-hidden{
-    display:block;
-    transition: opacity .3s ease;
-    opacity:1;
-}
-.hover_prev-img:hover > .prev_img-open{
-    display:none;
-}
-.hover_next-img:hover > .next_img-hidden{
-    display:block;
-}
-.hover_next-img:hover > .next_img-open{
-    display:none;
-}
+
 .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
     display: none;
 }
@@ -303,7 +291,67 @@ span.bar.x.open {
     color: transparent;
     transition: all .7s ease;
 }
-.ỉntroduce_information-child_0::after{
+.hover_prev-img{
+    border: 3px solid #0A9949;
+    color:#0A9949;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+.hover_prev-img:hover{
+    background-color: #0A9949;
+    color:white;
+    transition: all .7s ease;
+}
+.hover_prev-team,.hover_next-team{
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+.hover_prev-team:hover,.hover_next-team:hover{
+    background-color: white;
+    color:#0A9949;
+    transition: all .7s ease;
+}
+.hover_next-img{
+    position: relative;
+    background-clip: padding-box;
+    /* - Phần diện tích được thiết lập màu nền sẽ bao gồm:
+    padding.
+    content. */
+    border: 3px solid transparent;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+.hover_next-img:hover{
+    background-color:linear-gradient(90deg, #50C577 0%, #2DBEFC 100%);
+    z-index:1;
+    background-clip: inherit;
+    border: 3px solid transparent;
+    transition: all .7s ease;
+}
+.hover_next-img::before {
+    content: "";
+    position: absolute;
+    margin: -3px;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(90deg, #50C577 0%, #2DBEFC 100%);
+    border-radius: inherit;
+    transition: all .7s ease;
+}
+.hover_next-img >.next_img{
+    background: linear-gradient(90deg, #50C577 0%, #2DBEFC 100%);
+    background-clip: text;
+    color: transparent;
+    transition: all 1s ease;
+}
+.hover_next-img:hover > .next_img{
+    color:white;
+    transition: all 1s ease;
+}
+.introduce_information-child_0::after{
     content: "___";
     font-size: 16px;
     position: relative;
@@ -409,12 +457,12 @@ a.introduce_phone.flex.border-2.border-solid.rounded-full.w-64.h-16.text-white.i
 .contain-team_parent-1{
     height:410px;
 }
-.team_child-0_infor-0::before {
-    content: "-----";
+.team_child-0_infor-0::after {
+    content: "----------";
     font-size: 16px;
     color:#eee;
     text-decoration: line-through #3EED8B;
-    margin-right: 8px;
+    margin-left: 8px;
 }
 .team_child-1_slide{
     display:none;
@@ -521,18 +569,28 @@ img.team_img-child.team_img-child_1 {
 /* sửa phần js ở phần button */
 .btn_chung{
     display: flex;
-    background: #5ec58b;
+    position:relative;
+    box-shadow: 0px 8px 20px 0px #00E26466;
+    background: linear-gradient(135deg, #3EED8B 0%, #0A9949 100%);
     border-radius: 100px;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 8px 20px 0px #00E26466;
     transition: all .7s ease;    
 }
+
 .btn_chung:hover{
-    box-shadow: 0px 8px 20px 0px #00E26466;
     background: white;
-    color:#5ec58b;
     transition: all .7s ease;
+}
+.chan{
+    color:white;
+    transition: all 1s ease;
+}
+.btn_chung:hover > .chan{
+    background: linear-gradient(135deg, #3EED8B 0%, #0A9949 100%);
+    background-clip: text;
+    color: transparent;
+    transition: all 1s ease;
 }
 .price_list-infor_content::after {
     content: "-----";
@@ -545,8 +603,8 @@ img.team_img-child.team_img-child_1 {
     right: 1%;
     top: 19%;
 }
-span.price_list-infor_choose-child:hover{
-    background-color:rgb(240, 240, 240);
+.price_list-infor_choose-child:hover{
+    background-color:white;
 }
 .price_list-title_off{
     transition: all 1s ease;
@@ -976,6 +1034,14 @@ img.footer_img {
     }
     .footer{
         height: 600px;
+    }
+}
+@media screen and (min-width:640px){
+    .endow_people-like{
+        transform: translateY(50px);
+    }
+    .rating-star{
+        transform: translateY(34px);
     }
 }
 @media screen and (min-width:1280px){

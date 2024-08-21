@@ -1,6 +1,19 @@
 src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
 src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-
+// phàn button
+// const btnChung = document.querySelectorAll(".pdte");
+// btnChung.forEach(function(nameItem,X){
+//   nameItem.addEventListener("mouseover",function(){
+//     console.log("he;")
+//     btnChung[X].classList.add('active');
+//   })
+// })
+//   btnChung.forEach(function(nameItem,X){
+//     nameItem.addEventListener("mouseout",function(){
+//       btnChung[X].classList.remove('active');
+//     })
+    
+// })  
 // phần menu
 let navToggle = document.querySelector('.header_menu');
 let headerNavbar = document.querySelector('.header-navbar');
@@ -123,8 +136,8 @@ function scrollFunction() {
   // })
   
   const numberSlide = document.querySelectorAll(".slide-next");
-  const prevImg = document.querySelector(".prev_img");
-  const nextImg = document.querySelector(".next_img");
+  const prevImg = document.querySelector(".hover_prev-img");
+  const nextImg = document.querySelector(".hover_next-img");
   const swiperWarp = document.querySelector(".swiper-wrapper");
   const hello = document.querySelector(".swiper-slide-active");
   var  img = []
@@ -463,6 +476,9 @@ function scrollFunction() {
 // price_list chắc vậy
   var hiddenImgPrice = document.querySelectorAll(".price_list-img_child");
   var hiddenPrice = document.querySelectorAll(".price_list-infor_choose-child")
+  const hiddenTextPrice2 = document.querySelectorAll(".price_list-title_off");
+  const buttonPlus2 = document.querySelectorAll(".question-plus")
+  const buttonMinus2 = document.querySelectorAll(".question-minus")
   var namePrice = ".price_list-img_child-"
   var nameInfor = ".price_list-infor_choose-child_"
   var numberPrice = ""
@@ -482,31 +498,35 @@ function scrollFunction() {
           addd.classList.add('color');
           dele.classList.remove('hidden');
 
+          a = parseInt(X);
+          buttonPlus2[a].classList.toggle('hidden');
+          buttonMinus2[a].classList.toggle('hidden');
+          hiddenTextPrice2[a].classList.toggle('change_title');
         })
 
     })
   // phần price_list 2
-  const hiddenTextPrice2 = document.querySelectorAll(".price_list-title_off");
-  const buttonPlus2 = document.querySelectorAll(".question-plus")
-  const buttonMinus2 = document.querySelectorAll(".question-minus")
-  var numberPrice = ""
-  var numberName = ""
-  buttonPlus2.forEach(function(imgItem,X){
-    imgItem.addEventListener("click",function(){
-          a = parseInt(X);
-          buttonPlus2[a].classList.add('hidden');
-          buttonMinus2[a].classList.remove('hidden');
-          hiddenTextPrice2[a].classList.toggle('change_title');
-    })  
-})
-buttonMinus2.forEach(function(imgItem,X){
-    imgItem.addEventListener("click",function(){
-      a = parseInt(X);
-      hiddenTextPrice2[a].classList.toggle('change_title');
-      buttonMinus2[a].classList.add('hidden');
-      buttonPlus2[a].classList.remove('hidden');
-    })
-})
+//   const hiddenTextPrice2 = document.querySelectorAll(".price_list-title_off");
+//   const buttonPlus2 = document.querySelectorAll(".question-plus")
+//   const buttonMinus2 = document.querySelectorAll(".question-minus")
+//   var numberPrice = ""
+//   var numberName = ""
+//   buttonPlus2.forEach(function(imgItem,X){
+//     imgItem.addEventListener("click",function(){
+//           a = parseInt(X);
+//           buttonPlus2[a].classList.add('hidden');
+//           buttonMinus2[a].classList.remove('hidden');
+//           hiddenTextPrice2[a].classList.toggle('change_title');
+//     })  
+// })
+// buttonMinus2.forEach(function(imgItem,X){
+//     imgItem.addEventListener("click",function(){
+//       a = parseInt(X);
+//       hiddenTextPrice2[a].classList.toggle('change_title');
+//       buttonMinus2[a].classList.add('hidden');
+//       buttonPlus2[a].classList.remove('hidden');
+//     })
+// })
 // advatage pass 2:
 // tính giờ 
         // Thời gian kết thúc (đặt theo định dạng UTC)(h tiêu chuẩn)

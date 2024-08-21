@@ -2,6 +2,7 @@
     padding:0;
     margin:0;
 }
+
 ul{
     list-style: none;
 }
@@ -285,12 +286,7 @@ span.bar.x.open {
     rotate: -45deg;
     color:white;
 }
-.btn_chung:hover > .introduce_img-phone-font{
-    background: linear-gradient(#3EED8B, #0A9949);
-    background-clip: text;
-    color: transparent;
-    transition: all .7s ease;
-}
+
 .hover_prev-img{
     border: 3px solid #0A9949;
     color:#0A9949;
@@ -378,12 +374,12 @@ span.introduce_input-button_text {
     background-clip: text;
     color: transparent;
 }
-.register_table-input_child{
-    background: #F5F5F559;
-}
-.btn_chung:hover > .register_chan{
+.btn_chung2:hover > .register_chan{
     transition: all .7s ease;
     background: linear-gradient(to right, #3EED8B, #0A9949);
+}
+.btn_chung2.close_inset{
+    inset:auto;
 }
 /* color_padding */
 /* .button-information_header-text-child-font{
@@ -393,10 +389,13 @@ span.introduce_input-button_text {
     background-clip: content-box, padding-box;
     border-radius: 20px;
 } */
-.register_table-input_child::placeholder{
+.introduce_table-input_child::placeholder{
     color:white;
 }
+.introduce_table-input_child{
+    background: #F5F5F559;
 
+}
 a.introduce_phone.flex.border-2.border-solid.rounded-full.w-64.h-16.text-white.items-center.justify-evenly.image_button {
     width: 187px;
 }
@@ -571,40 +570,60 @@ img.team_img-child.team_img-child_1 {
     display: flex;
     position:relative;
     box-shadow: 0px 8px 20px 0px #00E26466;
+    background: white;
+    border-radius: 100px;
+    align-items: center;
+    z-index:-1;
+    justify-content: space-evenly;
+    transition: all .7s ease;    
+}
+.father_button{
+    position:relative;
+}
+.btn_chung2{
+    display: flex;
+    position:absolute;
+    box-shadow: 0px 8px 20px 0px #00E26466;
+    opacity:2;
     background: linear-gradient(135deg, #3EED8B 0%, #0A9949 100%);
     border-radius: 100px;
     align-items: center;
     justify-content: space-evenly;
-    transition: all .7s ease;    
+    transition: all .7s ease; 
+    inset:0;
 }
-
-.btn_chung:hover{
-    background: white;
+.btn_chung2:hover{
+    opacity:0;
     transition: all .7s ease;
 }
 .chan{
-    color:white;
-    transition: all 1s ease;
-}
-.btn_chung:hover > .chan{
     background: linear-gradient(135deg, #3EED8B 0%, #0A9949 100%);
     background-clip: text;
     color: transparent;
     transition: all 1s ease;
 }
+.chan2{
+    color:white;
+    transition: all 1s ease;
+}
 .price_list-infor_content::after {
-    content: "-----";
+    content: "______";
     font-size: 16px;
-    color:#eee;
-    text-decoration: line-through #3EED8B;
+    position: relative;
+    background: linear-gradient(135deg, #3EED8B 0%, #0A9949 100%);
+    background-clip: text;
+    color: transparent;
+    /* text-decoration: line-through; */
+    top: -7px;
     margin-left: 8px;
 }
 .price_list-input_button.btn_chung {
     right: 1%;
     top: 19%;
 }
-.price_list-infor_choose-child:hover{
-    background-color:white;
+.price_list-input_button.btn_chung2 {
+    right: 1%;
+    top: 19%;
 }
 .price_list-title_off{
     transition: all 1s ease;
@@ -866,9 +885,6 @@ img.footer_img {
         top: 15%;
         left: 71%;
     }
-    .footer{
-        height: 1300px;
-    }
 }
 @media screen and (max-width:510px) {
     .introduce_table.flex.w-full {
@@ -933,7 +949,7 @@ img.footer_img {
         height: 470px;
     }
     img.endow_icon-like {
-        left: 74%;
+        left: 70%;
         top: -2%;
     }
     .team_img-feature.h-60{

@@ -452,7 +452,7 @@ a.introduce_phone.flex.border-2.border-solid.rounded-full.w-64.h-16.text-white.i
 }
 .team_parent-1 {
     background: linear-gradient(to right, #3EED8B, #0A9949);
-    height: 410px;
+    height: 435px;
 }
 .contain-team_parent-1{
     height:410px;
@@ -849,7 +849,15 @@ img.footer_img {
         height: 50px;
 
     }
-
+    .team_parent-1 {
+        height: 472px;
+    }
+    .feel-left{
+        height:110px;
+    }
+    .feel-right{
+        height:110px;
+    }
     img.endow_icon-like {
         left: 80%;
         top: 2%;
@@ -893,7 +901,7 @@ img.footer_img {
         height: 39px;
     }
     .rating-star.h-16.w-52 {
-        top: 44%;
+        top: 43%;
         left: 1%;
         height:3rem;
         width: 11rem;
@@ -922,7 +930,7 @@ img.footer_img {
         height: 75px;
     }
     .team_parent-1 {
-        height: 446px;
+        height: 470px;
     }
     img.endow_icon-like {
         left: 74%;

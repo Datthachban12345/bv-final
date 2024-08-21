@@ -271,8 +271,8 @@ function scrollFunction() {
 
 // phần team
 // ý tưởng: ta có a và b vs b là mục tiêu cần tới a là phần tử ban đầu đc hiện ta kéo a ấn có show đi và hiện hide lên sau đó ta kéo show của b lên và ẩn hide a đi 
-  var prevTeam = document.querySelector(".prev_team");
-  var nextTeam = document.querySelector(".next_team");
+  var prevTeam = document.querySelector(".hover_prev-team");
+  var nextTeam = document.querySelector(".hover_next-team");
   var hiddenTeam = document.querySelectorAll(".team_child-1_slide ");
   const pagination = document.querySelectorAll(".pagination_team");
   var X = 0;

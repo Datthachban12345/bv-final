@@ -721,6 +721,88 @@ img.endow_background-girl_2 {
     pointer-events: all;
     visibility: unset;
 }
+@keyframes call-to-mes-circle-ani {
+    0%  {transform: rotate(0) scale(.7);opacity: .1;}
+    50% {transform: rotate(0) scale(1) ;opacity: .15;}
+    100% {transform: rotate(0) scale(.7);opacity: .2;}
+}
+@keyframes call-to-mes-img-ani {
+    /* skew là dộ nghiêng */
+    0%  {transform: rotate(0) scale(1) skew(1deg);}
+    10% {transform: rotate(-25deg) scale(1) skew(1deg);}
+    20% {transform: rotate(25deg) scale(1) skew(1deg);}
+    30% {transform: rotate(-25deg) scale(1) skew(1deg);}
+    40% {transform: rotate(25deg) scale(1) skew(1deg);}
+    50% {transform: rotate(0) scale(1) skew(1deg);}
+    100% {transform: rotate(0) scale(1) skew(1deg);}
+}
+.call-to-mes{
+    z-index: 40;
+    width: 66px;
+    height: 53px;
+    z-index: 40;
+    bottom: 134px;
+    right: 0;
+    position: fixed;
+}
+.call-to-mes-circle{
+    width: 60px;
+    height: 60px;
+    bottom: -4px;
+    left: 3px;
+    position: absolute;
+    background: #2b5e8a;
+    border-radius: 100%;
+    animation: call-to-mes-circle-ani 2.6s ease-in-out infinite alternate;
+    transition: all .5s;
+}
+.call-to-mes-img{
+    width: 42px;
+    height: 42px;
+    bottom: 2px;
+    left: 12px;
+    position: absolute;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: .99;
+    animation: call-to-mes-img-ani 1s ease-in-out infinite alternate;
+}
+.chat-mes{
+    opacity:0;
+    width:0;
+    height:0;
+    position: absolute;
+    background: #10a34a;
+    font-size: 14px;
+    padding:0;
+    color: #fff;  
+    left: -183px;
+    bottom: 8px;
+    cursor:auto;
+    transition: opacity 1s ease;
+    overflow:hidden;
+}
+.call-to-mes:hover > .chat-mes{
+    padding: 6px;
+    opacity:1;
+    width:auto;
+    height:auto;
+    overflow:inherit;
+    transition: opacity 1s ease;
+}
+.chat-mes::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-color: transparent transparent transparent #10a34a;
+    position: absolute;
+    left: 176px;
+    bottom:7px;
+    transition: opacity 1s ease;
+}
+
 span#hours_number {
     color: #FFEEB5;
     font-family: Lato;

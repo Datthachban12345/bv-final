@@ -622,8 +622,7 @@ img.team_img-child.team_img-child_1 {
     top: 19%;
 }
 .price_list-input_button.btn_chung2 {
-    right: 1%;
-    top: 19%;
+    left: -1%;
 }
 .price_list-title_off{
     transition: all 1s ease;
@@ -631,6 +630,10 @@ img.team_img-child.team_img-child_1 {
     width:100%;
     max-height:0;
     box-sizing: border-box;
+}
+.button_price-list{
+    right: 0;
+    top: 16px;
 }
 .price_list-title_off.change_title{
     transition: all 2s ease;

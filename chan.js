@@ -450,27 +450,19 @@ function scrollFunction() {
   var feelName = document.querySelectorAll(".feel-center-information_detail-name");
   var paddingFeel =  document.querySelector(".padding-color");
   var imgFeature = document.querySelector(".img_feature-feel")
-  var nameFeelImg = ".feel_child-img-"
-  var nameFeelName = ".feel-center-information_detail-name_"
-  var numberName = ""
-  var numberImg = ""
   feelImg.forEach(function(nameImg,X){
     
     // từ trên xuống dưới từ trái qua phải
     nameImg.addEventListener("click",function(){
-      numberName = nameFeelName + X.toString();
-      numberImg = nameFeelImg + X.toString();
       feelName.forEach(cong => {
             cong.classList.add('hidden');
       });
       feelImg.forEach(cong => {
             cong.classList.remove('padding-color')
       });
-      var removeFeel = document.querySelector(numberName);
-      var addFeel = document.querySelector(numberImg);
-      removeFeel.classList.remove('hidden');
-      addFeel.classList.add('padding-color');
-      imgFeature.src = addFeel.src;
+      feelName[X].classList.remove('hidden');
+      feelImg[X].classList.add('padding-color');
+      imgFeature.src = feelImg[X].src;
     })
   })
 // price_list chắc vậy
@@ -479,24 +471,18 @@ function scrollFunction() {
   const hiddenTextPrice2 = document.querySelectorAll(".price_list-title_off");
   const buttonPlus2 = document.querySelectorAll(".question-plus")
   const buttonMinus2 = document.querySelectorAll(".question-minus")
-  var namePrice = ".price_list-img_child-"
-  var nameInfor = ".price_list-infor_choose-child_"
-  var numberPrice = ""
-  var numberName = ""
   hiddenPrice.forEach(function(nameItem,X){
         nameItem.addEventListener("click",function(){
           numberPrice = namePrice + X.toString()
           var dele = document.querySelector(numberPrice)
-          numberName =  nameInfor + X.toString()
-          var addd = document.querySelector(numberName)
           hiddenImgPrice.forEach(cong => {
             cong.classList.add('hidden');
           });
           hiddenPrice.forEach(cong => {
             cong.classList.remove('color');
           });
-          addd.classList.add('color');
-          dele.classList.remove('hidden');
+          hiddenPrice[X].classList.add('color');
+          hiddenImgPrice[X].classList.remove('hidden');
 
           a = parseInt(X);
           buttonPlus2[a].classList.toggle('hidden');

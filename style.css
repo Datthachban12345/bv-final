@@ -697,7 +697,7 @@ img.endow_background-girl_2 {
     color: transparent;
 }
 .endow_people-like{
-    width:419px;
+    width:430px;
 }
 .back-to-top{
     padding-top: 2px;
@@ -976,7 +976,9 @@ img.footer_img {
         top: 15%;
         left: 71%;
     }
-
+    img.advantage_child-top_img-ch.p-5 {
+        padding: 0.75rem;
+    }
 }
 @media screen and (max-width:510px) {
     .introduce_table.flex.w-full {
@@ -1065,9 +1067,7 @@ img.footer_img {
     .introduce_table.h-96 {
         height: 450px;
     }
-    img.advantage_child-top_img-ch.p-5 {
-        padding: 0.75rem;
-    }
+
     .footer_gmail{
         display:flex;
         flex-direction: column;

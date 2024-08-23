@@ -696,6 +696,9 @@ img.endow_background-girl_2 {
     background-clip: text;
     color: transparent;
 }
+.endow_people-like{
+    width:419px;
+}
 .back-to-top{
     padding-top: 2px;
     width: 40px;
@@ -929,6 +932,9 @@ img.footer_img {
         left: 32%;
         top: 40%;
     }
+    .endow_people-like{
+        width:224px;
+    }
 }
 @media screen and (max-width:639px) {
     .endow_background-girl_0{
@@ -970,12 +976,16 @@ img.footer_img {
         top: 15%;
         left: 71%;
     }
+
 }
 @media screen and (max-width:510px) {
     .introduce_table.flex.w-full {
         height: 360px;
     }
     input.register_table-input_child {
+        width: 95%;
+    }
+    input.introduce_table-input_child {
         width: 95%;
     }
     .introduce_table-child_input.my-8 {
@@ -1069,6 +1079,9 @@ img.footer_img {
         display: none;
     }
     .price_list-input_button.w-48 {
+        width:9rem;
+    }
+    .father_button.w-48{
         width:9rem;
     }
     /* .close_advantage-child{

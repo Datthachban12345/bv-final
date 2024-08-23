@@ -473,8 +473,6 @@ function scrollFunction() {
   const buttonMinus2 = document.querySelectorAll(".question-minus")
   hiddenPrice.forEach(function(nameItem,X){
         nameItem.addEventListener("click",function(){
-          numberPrice = namePrice + X.toString()
-          var dele = document.querySelector(numberPrice)
           hiddenImgPrice.forEach(cong => {
             cong.classList.add('hidden');
           });

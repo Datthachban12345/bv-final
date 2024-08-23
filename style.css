@@ -697,7 +697,7 @@ img.endow_background-girl_2 {
     color: transparent;
 }
 .endow_people-like{
-    width:430px;
+    width:400px;
 }
 .back-to-top{
     padding-top: 2px;
@@ -857,7 +857,7 @@ img.footer_img {
     border-bottom-left-radius: 15px;
 }
 .register_table-content {
-    background: linear-gradient(to right, #16A084, #F4D03F);
+    background: linear-gradient(135deg, #3EED8B 0%, #0A9949 100%);
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
@@ -903,6 +903,11 @@ img.footer_img {
         height: 1200px;
     }
 }
+@media screen and (max-width:1024px){
+    .endow_people-like{
+        width:224px;
+    }
+}
 @media screen and (max-width:767px){
     .feel{
         align-items:center;
@@ -932,9 +937,7 @@ img.footer_img {
         left: 32%;
         top: 40%;
     }
-    .endow_people-like{
-        width:224px;
-    }
+
 }
 @media screen and (max-width:639px) {
     .endow_background-girl_0{
@@ -974,7 +977,6 @@ img.footer_img {
     }
     .endow_icon-star_parent {
         top: 15%;
-        left: 71%;
     }
     img.advantage_child-top_img-ch.p-5 {
         padding: 0.75rem;
